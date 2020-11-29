@@ -7,6 +7,13 @@ var LOGIN = {
             });
             return ;
         }
+
+        if($("#code").val()!=$(".code").val()){
+            layer.msg("验证码错误", {
+                time: 2000
+            });
+            return ;
+        }
         $.ajax({
             url:window.IM.restDomain+ this.loginUrl,
             type:"post",
