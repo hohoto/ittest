@@ -14,17 +14,13 @@ var LOGIN = {
                 "usercode":$("input[name=userCode]").val(),
                 "password":$("input[name=password]").val()
             },success:function(e){
-                if(e && Object.keys(e).length>0){
+                if(e && e.loginInfo){
                      USER.setUser(e.loginInfo);
                      window.location.href = window.ITM.jumpDomain + "index.html";
                  }else{
-                    e = {
-                        name:"yinyufeng",
-                        companyName:"测试公司",
-                        centerRoleName:"测试角色"
-                    };
-                    USER.setUser(e);
-                    window.location.href = window.ITM.jumpDomain + "index.html";
+                    layer.msg(e.message, {
+                        time: 2000
+                    });
                 }
             },error:function(){
                 layer.msg("登陆失败", {
