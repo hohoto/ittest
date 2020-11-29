@@ -57,7 +57,7 @@ var chart = Highcharts.chart('money-chart', {
 				[1, '#E84769']
 			]
 		},
-		pointWidth:10
+		pointWidth:30
 	}],
 	responsive: {
 		rules: [{
