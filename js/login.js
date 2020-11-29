@@ -8,7 +8,7 @@ var LOGIN = {
             return ;
         }
         $.ajax({
-            url:window.ITM.restDomain+ this.loginUrl,
+            url:window.IM.restDomain+ this.loginUrl,
             type:"post",
             data:{
                 "usercode":$("input[name=userCode]").val(),
@@ -18,7 +18,7 @@ var LOGIN = {
                      USER.setUser(e.loginInfo);
                      window.location.href = window.ITM.jumpDomain + "index.html";
                  }else{
-                    layer.msg(e.message, {
+                    layer.msg(e.msg, {
                         time: 2000
                     });
                 }
