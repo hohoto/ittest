@@ -15,7 +15,7 @@ var LOGIN = {
             return ;
         }
         $.ajax({
-            url:window.IM.restDomain+ this.loginUrl,
+            url:window.ITM.restDomain+ this.loginUrl,
             type:"post",
             data:{
                 "usercode":$("input[name=userCode]").val(),
