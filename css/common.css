@@ -1,10 +1,39 @@
 @charset "UTF-8";
-*,
-::before,
+* ::before,
 ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html,
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+button,
+select,
+textarea,
+p,
+blockquote,
+th,
+td {
+  padding: 0;
+  margin: 0;
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'PingFang SC', 'Hiragino Sans GB', 'Roboto', 'Arial', 'Microsoft YaHei', 'sans-serif' !important;
+  list-style: none;
 }
 body {
   font-size: 0.37333333rem;
@@ -149,4 +178,18 @@ img {
 }
 .bg-blue {
   background-color: #f3f5f9;
+}
+/*公共的选项*/
+.from-info {
+  position: relative;
+}
+.from-info .formlist.selected {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 100%;
+}
+.from-info .formlist.ani_left {
+  left: 0%;
+  animation: all 1s linear;
 }

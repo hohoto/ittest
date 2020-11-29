@@ -85,4 +85,23 @@ var chart = Highcharts.chart('money-chart', {
 			}
 		}]
 	}
-})
+});
+
+var INDEX = {
+	load:function(){
+		if(!USER.hasLogin()){
+			window.location.href=window.ITM.jumpDomain+"login.html";
+			return;
+		}
+		var user = USER.getUser();
+		user.rolename = user.rolename || "管理员";
+		var tplData = {
+			user:user
+		}
+		$("#userInfo").innerHTML = template("userInfo_tpl",tplData);
+	},
+	init:function(){
+		this.load();
+		return this;
+	}
+}.init();
