@@ -1,3 +1,9 @@
+var domWidth = document.documentElement.clientWidth
+if (domWidth > 1000) {
+	var point_Width = 30
+} else {
+	var point_Width = 10
+}
 var chart = Highcharts.chart('money-chart', {
 	chart: {
 		type: 'column'

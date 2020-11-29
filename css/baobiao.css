@@ -208,3 +208,111 @@ img {
   left: 0%;
   animation: all 30s linear;
 }
+.report .it-header {
+  height: 7.2rem;
+}
+.report .chart {
+  top: 5.86666667rem;
+}
+.report .report-list {
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+  padding: 1.06666667rem 0 0 0.4rem;
+  box-sizing: border-box;
+}
+.report .report-list li {
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 0.37333333rem;
+}
+.report .report-list2 {
+  margin-bottom: 1.6rem;
+}
+.report .report-list2 li {
+  height: 1.06666667rem;
+  line-height: 0.42666667rem;
+  box-sizing: border-box;
+  font-size: 0.32rem;
+  padding: 0 0 0 0.53333333rem;
+  font-size: 0.37333333rem;
+}
+.report .report-list2 li::before {
+  content: '';
+  display: block;
+  width: 0.32rem;
+  height: 0.32rem;
+  background-color: #575af3;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.report .report-list2 li::after {
+  content: '';
+  display: block;
+  width: 0.21333333rem;
+  height: 0.21333333rem;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0.05333333rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.report .report-list2 li:nth-child(2)::before {
+  background-color: #B37AFC;
+}
+.report .report-list2 li:nth-child(3)::before {
+  background-color: #FF8738;
+}
+.report .report-list2 li:nth-child(4)::before {
+  background-color: #FF6678;
+}
+.report .report-list2 li:nth-child(5)::before {
+  background-color: #666;
+}
+.report .report-list2 .report-num {
+  line-height: 1.04rem;
+}
+.report-head {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  box-sizing: border-box;
+  padding: 0.53333333rem;
+}
+.report-head .icon-fanhui {
+  color: #fff;
+}
+.report-head .tongji {
+  width: 100%;
+  color: #fff;
+}
+.report-head .baobiao {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 6.4rem;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  margin: 0.53333333rem auto 0;
+  font-size: 0.32rem;
+  text-align: center;
+  border-radius: 0.13333333rem;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0.05333333rem 0.05333333rem 0.05333333rem 0.05333333rem rgba(0, 0, 0, 0.3);
+}
+.pie-chart {
+  padding: 0.4rem 0.4rem 0;
+  background-color: #fff;
+}
+.pie-chart .report-chart {
+  height: 8rem;
+  border-bottom: 0.02666667rem solid #eceef2;
+}

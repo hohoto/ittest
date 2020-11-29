@@ -1,0 +1,120 @@
+@import 'common';
+@b: 37.5;
+.report{
+  .it-header{
+    height: 270rem/@b;
+  }
+  .chart{
+    top: 220rem/@b;
+  }
+  .report-list{
+    position: absolute;
+    top: 150rem/@b;
+    width: 100%;
+    padding: 40rem/@b 0 0 15rem/@b;
+    box-sizing: border-box;
+    li{
+      height: 40rem/@b;
+      line-height: 40rem/@b;
+      box-sizing: border-box;
+      padding: 0;
+      font-size: 14rem/@b;
+    }
+  }
+  .report-list2{
+    margin-bottom: 60rem/@b;
+    li{
+      height: 40rem/@b;
+      line-height: 16rem/@b;
+      box-sizing: border-box;
+      font-size: 12rem/@b;
+      padding: 0 0 0 20rem/@b;
+      font-size: 14rem/@b;
+      &::before{
+        content: '';
+        display: block;
+        width: 12rem/@b;
+        height: 12rem/@b;
+        background-color: #575af3;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        border-radius: 50%;
+      }
+      &::after{
+        content: '';
+        display: block;
+        width: 8rem/@b;
+        height: 8rem/@b;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 2rem/@b;
+        transform: translateY(-50%);
+        border-radius: 50%;
+      }
+      &:nth-child(2){
+        &::before{
+          background-color: #B37AFC;
+        }
+      }
+      &:nth-child(3){
+        &::before{
+          background-color: #FF8738;
+        }
+      }
+      &:nth-child(4){
+        &::before{
+          background-color: #FF6678;
+        }
+      }
+      &:nth-child(5){
+        &::before{
+          background-color: #666;
+        }
+      }
+    }
+    .report-num{
+      line-height: 39rem/@b;
+    }
+  }
+}
+.report-head{
+  position: absolute;
+  top: 0;
+  width: 375rem / @b;
+  box-sizing: border-box;
+  padding: 20rem/@b;
+  .icon-fanhui{
+    color: #fff;
+  }
+  .tongji{
+    width: 100%;
+    color: #fff;
+  }
+  .baobiao{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 240rem/@b;
+    height: 40rem/@b;
+    line-height: 40rem/@b;
+    margin: 20rem/@b auto 0;
+    font-size: 12rem/@b;
+    text-align: center;
+    border-radius: 5rem/@b;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 2rem/@b 2rem/@b 2rem/@b 2rem/@b rgba(0, 0, 0, 0.3);
+  }
+}
+.pie-chart{
+  padding: 15rem/@b 15rem/@b 0;
+  background-color: #fff;
+  .report-chart{
+    height: 300rem/@b;
+    border-bottom: 1rem/@b solid #eceef2;
+  }
+}

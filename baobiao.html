@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <title>2020It-Game</title>
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="./css/add-new.css">
+  <link rel="stylesheet" href="./css/baobiao.css">
+  <script src="./flexible/flexible.js"></script>
+  <script src="./js/highcharts.js"></script>
+  <script src="./js/chart3d.js"></script>
+  <script src="./fonts/iconfont.js"></script>
+</head>
+
+<body>
+  <div class="contaoner report">
+    <!-- 头部 -->
+    <div class="it-header">
+      <div class="report-head">
+        <div class="go-history clearfix">
+          <a href="./index.html" class="fl ml5">
+            <i class="iconfont icon-fanhui font20 vm"></i>
+          </a>
+        </div>
+        <div class="mt15 tongji clearfix tc">
+          <div class="w50 fl">
+            <div class="font12">待盘点任务</div>
+            <div class="font30">10 <em class="font12">个</em></div>
+          </div>
+          <div class="w50 fl">
+            <div class="font12">待盘点任务</div>
+            <div class="font30">10 <em class="font12">条</em></div>
+          </div>
+        </div>
+        <div class="baobiao mt20">
+          资产报表
+        </div>
+      </div>
+      <div class="formlist report-list">
+        <ul>
+          <li>
+            <span>保修资产</span>
+            <span class="fr mr30">2个</span>
+            <i class="fr iconfont icon-gengduo gray"></i>
+          </li>
+          <li>
+            <span>调拨确认</span>
+            <em class="red">*</em>
+            <span class="fr mr30">4单</span>
+            <i class="iconfont icon-gengduo gray"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 图表 -->
+    <div class="mt10 pie-chart">
+      <div class="font12 gray">当前资产使用情况</div>
+      <div class="mt10 report-chart" id="report-chart"></div>
+    </div>
+    <div class="formlist report-list2">
+      <ul>
+        <li>
+          <div class="fl mt5">
+            <div>在用</div>
+            <div class="gray">68%</div>
+          </div>
+          <div class="fr report-num">
+            <span class="mr30 font14">56<span class="ml10 font12">个</span></span>
+            <i class="fr iconfont icon-gengduo gray"></i>
+          </div>
+        </li>
+        <li>
+          <div class="fl mt5">
+            <div>闲置</div>
+            <div class="gray">68%</div>
+          </div>
+          <div class="fr report-num">
+            <span class="mr30 font14">56<span class="ml10 font12">个</span></span>
+            <i class="fr iconfont icon-gengduo gray"></i>
+          </div>
+        </li>
+        <li>
+          <div class="fl mt5">
+            <div>占用</div>
+            <div class="gray">68%</div>
+          </div>
+          <div class="fr report-num">
+            <span class="mr30 font14">56<span class="ml10 font12">个</span></span>
+            <i class="fr iconfont icon-gengduo gray"></i>
+          </div>
+        </li>
+        <li>
+          <div class="fl mt5">
+            <div>维修中</div>
+            <div class="gray">68%</div>
+          </div>
+          <div class="fr report-num">
+            <span class="mr30 font14">56<span class="ml10 font12">个</span></span>
+            <i class="fr iconfont icon-gengduo gray"></i>
+          </div>
+        </li>
+        <li>
+          <div class="fl mt5">
+            <div>清理报废</div>
+            <div class="gray">68%</div>
+          </div>
+          <div class="fr report-num">
+            <span class="mr30 font14">56<span class="ml10 font12">个</span></span>
+            <i class="fr iconfont icon-gengduo gray"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+   
+    <!-- 底部 -->
+    <div class="it-footer">
+      <ul>
+        <li>
+          <a href="./index.html">
+            <div>
+              <i class="iconfont icon-shouye font22"></i>
+            </div>
+            <div>首页</div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div>
+              <i class="iconfont icon-gongzuotai font22"></i>
+            </div>
+            <div>工作台</div>
+          </a>
+        </li>
+        <li>
+          <a href="" class="saomiao">
+            <i class="iconfont icon-saoyisao font22"></i>
+          </a>
+        </li>
+        <li  class="active">
+          <a href="">
+            <div>
+              <i class="iconfont icon-baobiao font22"></i>
+            </div>
+            <div>报表</div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div>
+              <i class="iconfont icon-wode font22"></i>
+            </div>
+            <div>我的</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <script src="./js/report.js"></script>
+</body>
+
+</html>
