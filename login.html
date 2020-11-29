@@ -4,6 +4,8 @@
 		<title>login登录动效 www.bootstrapmb.com</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="./fonts/iconfont.css">
+		<link rel="stylesheet" href="css/common.css">
 		<style>
 			body {
 				margin: 0;
@@ -62,7 +64,7 @@
 				padding: 3px 1px 1px 0;
 				border-radius: 3px;
 			}
-			.log-con >span {
+			.log-con span {
 				font-size: 30px;
 				font-weight: bold;
 				line-height: 24px;
@@ -70,7 +72,7 @@
 				display: block;
 				margin: 20px 0 44px 0;
 			}
-			.log-con >span::after {
+			.log-con span::after {
 				display: block;
 				content: '';
 				width: 57px;
@@ -81,9 +83,9 @@
 				position: relative;
 				left: 206px;
 			}
-			.log-con>input {
+			.log-con .login_infor input {
 				display: block;
-				width: 330px;
+				width: 300px;
 				height: 42px;
 				background-color: #ffffff;
 				border-radius: 4px;
@@ -91,12 +93,12 @@
 				border: 0;
 				font-size: 16px;
 				outline: none;
-				padding-left: 10px;
+				padding-left: 40px;
 				color: #000000;
 				text-align: left;
 				margin: 10px auto 30px;
 			}
-			.log-con>a,.log-con>a:visited {
+			.log-con a.btn-login,.log-con a.btn-login:visited {
 				width: 340px;
 				height: 44px;
 				background-color: #0090ff;
@@ -125,13 +127,18 @@
 				color: #000000;
 				font-size: 16px;
 			}
-			.log-con>.code {
+			.log-con .login_infor{
+				width: 340px;
+				margin: 0 auto;
+			}
+			.log-con .login_infor .code {
 				width: 216px;
 				display: inline-block;
 				margin-left: 6px;
+				padding: 0;
 				text-align: center;
 			}
-			.log-con>#code {
+			.log-con #code {
 				width: 94px;
 				display: inline-block;
 				margin-left: 14px;
@@ -149,14 +156,17 @@
 				max-width: 100%;
 				max-height: 100%;
 			}
-			/*版权样式*/
-			.copyright {
-				position: fixed;
-				bottom: 10px;
-				font-size: 16px;
-				display: block;
-				width: 100%;
-				text-align: center;
+
+			.log-con li{
+				position: relative;
+			}
+			.icon-username,.icon-password{
+				position: absolute;
+				left: 10px;
+				top: 7px;
+				z-index: 1000;
+				color: #2199f3;
+				font-size: 25px;
 			}
 		</style>
 	</head>
@@ -164,12 +174,29 @@
 <div class="main">
     <div class="login">
         <div class="log-con">
-            <span>登录</span>
-            <input type="text" class="name" placeholder="请输入用户名"/>
-            <input type="text" class="password" placeholder="请输入密码"/>
-            <input type="text" class="code" placeholder="请输入验证码"/>
-            <input type="button" id="code" onclick="change();"/>
-            <a>立即登录</a>
+			<span>登录</span>
+			<!-- <input type="text" class="name" placeholder="请输入用户名"/>
+			<input type="text" class="password" placeholder="请输入密码"/>
+			<input type="text" class="code" placeholder="请输入验证码"/>
+					<input type="button" id="code" onclick="change();"/>  -->
+					<!-- <a>立即登录</a> -->
+			<ul class="login_infor">
+				<li class="">
+					<i class="icon iconfont icon-username"></i>
+					<input type="text" class="name" placeholder="请输入用户名"/>
+				</li>
+				<li>
+					<i class="icon iconfont icon-password"></i>
+					<input type="text" class="password" placeholder="请输入密码"/>
+				</li>
+				<li>
+					<input type="text" class="code" placeholder="请输入验证码"/>
+					<input type="button" id="code" onclick="change();"/>
+				</li>
+				<li>
+					<a class="btn-login">立即登录</a>
+				</li>
+			</ul>
         </div>
     </div>
 </div>
