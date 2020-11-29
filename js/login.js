@@ -8,8 +8,21 @@ var LOGIN = {
                 "usercode":$("input[name=userCode]").val(),
                 "password":$("input[name=password]").val()
             },success:function(e){
-                 USER.setUser(e);
-                 window.location.href= window.ITM.jumpDomain + "index.html";
+                e = {
+                    name:"yinyufeng",
+                    companyname:"测试公司",
+                    rolename:"测试角色"
+                };
+                 if(e) {
+                     USER.setUser(e);
+                     window.location.href = window.ITM.jumpDomain + "index.html";
+                 }
+            },error:function(){
+                USER.setUser({
+                    name:"yinyufeng",
+                    companyname:"测试公司",
+                    rolename:"测试角色"
+                });
             }
         })
     },
