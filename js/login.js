@@ -15,13 +15,13 @@ var LOGIN = {
                 "password":$("input[name=password]").val()
             },success:function(e){
                 if(e && Object.keys(e).length>0){
-                     USER.setUser(e);
+                     USER.setUser(e.loginInfo);
                      window.location.href = window.ITM.jumpDomain + "index.html";
                  }else{
                     e = {
                         name:"yinyufeng",
-                        companyname:"测试公司",
-                        rolename:"测试角色"
+                        companyName:"测试公司",
+                        centerRoleName:"测试角色"
                     };
                     USER.setUser(e);
                     window.location.href = window.ITM.jumpDomain + "index.html";
