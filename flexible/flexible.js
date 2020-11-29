@@ -21,7 +21,7 @@
 }
   else {
       // window.location.href="你的电脑版地址";  
-      var rem = docEl.clientWidth / 20
+      var rem = docEl.clientWidth / 30
       }
 
     // var rem = docEl.clientWidth / 10

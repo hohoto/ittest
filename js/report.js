@@ -27,8 +27,7 @@ var REPORT = {
 		var sum = 0;
 		for(var i in data){
 			sum += data[i];
-			
-	}
+		}
 		$("#reportList").html(template("reportList_tpl",{data:data,sum:sum}));
 	},
 	chart:function(data){
@@ -53,6 +52,14 @@ var REPORT = {
 			subtitle: {
 				text: ''
 			},
+<<<<<<< HEAD
+=======
+			tooltip: {
+				style: {
+					fontSize: 14
+				}
+			},
+>>>>>>> 3844578c7b29cd8c0b256eb9287b3221b78b8cb8
 			plotOptions: {
 				pie: {
 					innerSize: 100,

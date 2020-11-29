@@ -10,19 +10,19 @@
 }
 @media screen and (min-width: 900px) {
   .contaoner {
-    width: 1024px;
+    width: 840px;
     // height: 100%;
     max-width: 750rem / @b;
     min-width: 320rem / @b;
     margin: 0 auto;
-    background-color: #d4e3f573;
+    background-color: #f3f5f9;
     overflow: hidden;
   }
   // .chart{
   //   width: 972px!important;
   // }
   .it-footer,.all-footer,.add-footer{
-    width: 1024px!important;
+    width: 840px!important;
   }
 
   // all.less
@@ -71,6 +71,7 @@
     border-radius: 4rem / @b;
     font-size: 13rem / @b;
     text-align: center;
+    margin-left: 5rem / @b;
     vertical-align: middle;
   }
   .company {
@@ -125,11 +126,18 @@
   height: 166rem / @b;
   background-color: #ffffff;
   border-radius: 16rem / @b;
+  &.li-3{
+    ul{
+      li{
+        width: 33%;
+      }
+    }
+  }
   ul {
     padding-top: 10rem / @b;
     li {
       float: left;
-      width: 33%;
+      width: 25%;
       height: 50%;
       color: #60656e;
       font-size: 13rem / @b;

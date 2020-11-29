@@ -42,7 +42,7 @@ em {
 body {
   font-size: 0.37333333rem;
   font-family: 'Microsoft YaHei', sans-serif;
-  background-color: #f3f5f9;
+  background-color: #f1f1f1;
   overflow-x: hidden;
 }
 a {
@@ -218,17 +218,17 @@ img {
 }
 @media screen and (min-width: 900px) {
   .contaoner {
-    width: 1024px;
+    width: 840px;
     max-width: 20rem;
     min-width: 8.53333333rem;
     margin: 0 auto;
-    background-color: #d4e3f573;
+    background-color: #f3f5f9;
     overflow: hidden;
   }
   .it-footer,
   .all-footer,
   .add-footer {
-    width: 1024px!important;
+    width: 840px!important;
   }
   .all-head {
     width: auto!important;
@@ -275,6 +275,7 @@ img {
   border-radius: 0.10666667rem;
   font-size: 0.34666667rem;
   text-align: center;
+  margin-left: 0.13333333rem;
   vertical-align: middle;
 }
 .it-header .company {
@@ -327,6 +328,10 @@ img {
   background-color: #ffffff;
   border-radius: 0.42666667rem;
 }
+.it-nav-two.li-3 ul li,
+.it-nav.li-3 ul li {
+  width: 33%;
+}
 .it-nav-two ul,
 .it-nav ul {
   padding-top: 0.26666667rem;
@@ -334,7 +339,7 @@ img {
 .it-nav-two ul li,
 .it-nav ul li {
   float: left;
-  width: 33%;
+  width: 25%;
   height: 50%;
   color: #60656e;
   font-size: 0.34666667rem;
