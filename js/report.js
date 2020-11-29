@@ -1,4 +1,3 @@
-
 var REPORT = {
 	init:function(){
 		if(!USER.hasLogin()){
