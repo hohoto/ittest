@@ -206,7 +206,7 @@ img {
 .it-header .admin {
   display: inline-block;
   color: #5855fe;
-  width: 1.25333333rem;
+  padding: 0 0.13333333rem;
   height: 0.58666667rem;
   line-height: 0.58666667rem;
   background-color: #ffffff;
@@ -226,7 +226,8 @@ img {
   border-radius: 0.42666667rem;
   position: absolute;
   top: 3.68rem;
-  left: 0.4rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .chart .money {
   margin: 0.53333333rem 0.4rem 0 0.4rem;
