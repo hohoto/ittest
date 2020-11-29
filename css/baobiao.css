@@ -316,3 +316,39 @@ img {
   height: 8rem;
   border-bottom: 0.02666667rem solid #eceef2;
 }
+.percent-con {
+  width: 300px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: #f1f1f1;
+  position: relative;
+  text-align: right;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.percent {
+  height: 10px;
+  border-radius: 6px;
+  background-color: #575af3;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+li:nth-child(2) .percent {
+  background-color: #B37AFC;
+}
+li:nth-child(3) .percent {
+  background-color: #FF8738;
+}
+li:nth-child(4) .percent {
+  background-color: #FF6678;
+}
+li:nth-child(5) .percent {
+  background-color: #666;
+}
+.perent-text {
+  position: absolute;
+  right: 4px;
+  top: -4px;
+  font-size: 12px;
+}
