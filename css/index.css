@@ -246,6 +246,10 @@ img {
   color: #60656e;
   font-size: 0.32rem;
 }
+.chart .money-chart {
+  width: 100%;
+  height: 6.66666667rem;
+}
 .it-nav-two,
 .it-nav {
   margin: 0 0.4rem;

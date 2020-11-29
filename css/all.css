@@ -251,6 +251,7 @@ img {
   height: 1.76rem;
   border-radius: 0.13333333rem;
   position: relative;
+  overflow: hidden;
 }
 .all-list .assets-img .tag {
   position: absolute;
