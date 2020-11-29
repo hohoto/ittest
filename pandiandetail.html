@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>资产盘点</title>
+    <link rel="stylesheet" href="./fonts/iconfont.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="css/add-new.css" />
+  </head>
+
+  <body>
+    <div class="contaoner">
+      <!-- 头部 -->
+      <div class="add-head">
+        <div class="go-history clearfix">
+          <a href="./category.html" class="fl ml5">
+            <i class="iconfont icon-fanhui font20 vm"></i>
+            <span class="font16 vm"> 盘点单明细</span>
+          </a>
+        </div>
+      </div>
+      <div class="search-con">
+        <input type="text" class="search-input" placeholder="">
+        <i class="iconfont icon-qingchu"></i>
+        <i class="iconfont icon-sousuo"></i>
+      </div>
+      <a href="javascript:;" class="com-btn add-category" style="margin-left:10px ;">完成盘点单</a>
+      <div class="from-info" style="text-align: center;">
+           <span>您暂时还没有已盘点项目</span> 
+        <form action="">
+          <div class="formlist">
+            <ul>
+              <li id="li1" style="display: none;">
+                <span></span>
+                <i class="fr iconfont icon-gengduo gray"></i>
+              </li>
+              <li id="li2" style="display: none;">
+                <span></span>
+                <i class="fr iconfont icon-gengduo gray"></i>
+              </li>
+              <li id="li3" style="display: none;">
+                <span></span>
+                <i class="fr iconfont icon-gengduo gray"></i>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+      
+      <!-- 底部 -->
+      <div class="add-footer">
+        <a href="./createpandiandetail.html" class="com-btn add-category">新增盘点明细</a>
+        
+      </div>
+    </div>
+    <script src="./flexible/flexible.js"></script>
+    <script src="./fonts/iconfont.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/pandian/category.js"></script>
+    <script type="text/javascript" src="js/conf.js"></script>
+  </body>
+</html>

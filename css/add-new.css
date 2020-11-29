@@ -1,15 +1,49 @@
 @charset "UTF-8";
-*,
-::before,
+* ::before,
 ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+html,
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+button,
+select,
+textarea,
+p,
+blockquote,
+th,
+td {
+  padding: 0;
+  margin: 0;
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'PingFang SC', 'Hiragino Sans GB', 'Roboto', 'Arial', 'Microsoft YaHei', 'sans-serif' !important;
+  list-style: none;
+}
+i,
+em {
+  font-style: normal;
+}
 body {
   font-size: 0.37333333rem;
   font-family: 'Microsoft YaHei', sans-serif;
-  background-color: #f3f5f9;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
 }
 a {
   color: #60656e;
@@ -40,6 +74,12 @@ textarea {
   height: 0;
   line-height: 0;
   clear: both;
+}
+.w50 {
+  width: 50%;
+}
+.tc {
+  text-align: center;
 }
 img {
   display: block;
@@ -117,6 +157,9 @@ img {
 .font24 {
   font-size: 0.64rem;
 }
+.font30 {
+  font-size: 0.8rem;
+}
 .svg_icon {
   width: 1em;
   height: 1em;
@@ -149,6 +192,21 @@ img {
 }
 .bg-blue {
   background-color: #f3f5f9;
+}
+/*公共的选项*/
+.from-info {
+  position: relative;
+}
+.from-info .formlist.selected {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  box-sizing: border-box;
+}
+.from-info .formlist.ani_left {
+  left: 0%;
+  animation: all 30s linear;
 }
 .add-head {
   width: 10rem;
@@ -186,6 +244,7 @@ img {
   position: relative;
   color: #000000;
   font-size: 0.42666667rem;
+  font-weight: bold;
 }
 .com-title::before {
   display: block;
@@ -208,8 +267,8 @@ img {
   overflow: hidden;
 }
 .formlist li {
+  position: relative;
   width: 100%;
-  min-height: 1.6rem;
   line-height: 0.8rem;
   padding: 0.4rem 0;
   font-size: 0.42666667rem;
@@ -217,15 +276,19 @@ img {
 }
 .formlist li input {
   float: right;
-  padding-right: 0.53333333rem;
+  text-align: right;
+  font-size: 0.42666667rem;
+  padding-right: 0.8rem;
   line-height: 0.74666667rem;
+  max-width: 4.93333333rem;
 }
 .formlist li .icon-saoyisao,
 .formlist li .icon-gengduo,
 .formlist li .icon-bianji {
   font-size: 0.42666667rem;
   position: absolute;
-  right: 0.53333333rem;
+  right: 0.13333333rem;
+  cursor: pointer;
 }
 .formlist li .error {
   text-align: right;
@@ -244,12 +307,16 @@ img {
   font-style: normal;
   margin-right: 0.13333333rem;
 }
+.formlist li:last-child {
+  border-bottom: none;
+}
 .add-footer {
   width: 10rem;
   height: 1.97333333rem;
   position: fixed;
   text-align: center;
   bottom: 0;
+  background-color: #f3f5f9;
 }
 .add-footer .add-save {
   background-color: #5855fe;

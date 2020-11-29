@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./fonts/iconfont.css">
   <link rel="stylesheet" href="css/index.css">
   <script src="./flexible/flexible.js"></script>
+  <script src="./js/highcharts.js"></script>
   <script src="./fonts/iconfont.js"></script>
 </head>
 
@@ -16,27 +17,32 @@
   <div class="contaoner">
     <!-- 头部 -->
     <div class="it-header">
-      <div class="who">
-        <div>HI！<span class="name">张三</span><span class="admin">管理员</span></div>
-        <div class="company mt10">欧冶云商股份有限公司</div>
+      <div class="who" id="userInfo">
+        <script type="text/html" id="userInfo_tpl">
+        <div>HI！<span class="name">{{user.name}}</span><span class="admin">{{user.centerRoleName}}</span></div>
+        <div class="company mt10">{{user.companyName}}</div>
+        </script>
       </div>
       <!-- 图表 -->
       <div class="chart">
         <div class="money">
           <strong class="money-txt">资产净值</strong>
-          <span class="ml10 money-num">￥3650,800.00</span>
-          <span class="money-number">/240件</span>
+          <span class="moneyWidth">
+            <em class="ml10 money-num">￥3650,800.00</em>
+            <em class="money-number">/240件</em>
+          </span>
           <a class="fr" href="./all.html">
-            <span class="gray mr5 font13">全部</span>
+            <span class="gray font13">全部</span>
             <i class="iconfont icon-gengduo font16 gray vm"></i>
           </a>
         </div>
-
-        <div class="money-chart"></div>
+        <div class="chart_pos">
+          <div class="money-chart" id="money-chart"></div>
+        </div>
       </div>
     </div>
     <!-- 导航 -->
-    <div class="it-nav">
+    <div class="it-nav li-3">
       <ul class="clearfix">
         <li>
           <a href="./add-new.html">
@@ -99,7 +105,7 @@
           </a>
         </li>
         <li>
-          <a href="javascript:;">
+          <a href="./chuzhiall.html">
             <div>
               <svg class="svg_icon font24" aria-hidden="true">
                 <use xlink:href="#icon-chuzhi"></use>
@@ -140,14 +146,26 @@
           </a>
         </li>
         <li>
-          <a href="./shezhi.html">
-            <div>
+          <a href="https://www.ouyeelbuy.com/" target="_blank">
+            <div class="logo-img">
               <svg class="svg_icon font24" aria-hidden="true">
-                <use xlink:href="#icon-shezhi"></use>
+                <use xlink:href="#icon-ouyecaigou"></use>
               </svg>
             </div>
             <div class="mt10">
-              属性设置
+              欧冶采购
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.bsteel.com.cn/newexchange/index.do" target="_blank">
+            <div class="logo-img big-img">
+              <svg class="svg_icon font24" aria-hidden="true">
+                <use xlink:href="#icon-xunhuanbao"></use>
+              </svg>
+            </div>
+            <div class="mt10">
+              循环宝
             </div>
           </a>
         </li>
@@ -157,7 +175,7 @@
     <div class="it-footer">
       <ul>
         <li class="active">
-          <a href="">
+          <a href="./index.html">
             <div>
               <i class="iconfont icon-shouye font22"></i>
             </div>
@@ -178,7 +196,7 @@
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="./baobiao.html">
             <div>
               <i class="iconfont icon-baobiao font22"></i>
             </div>
@@ -196,7 +214,13 @@
       </ul>
     </div>
   </div>
-  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="layui/layui.all.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/conf.js"></script>
+  <script src="js/user.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

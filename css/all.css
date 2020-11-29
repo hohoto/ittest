@@ -170,7 +170,7 @@ img {
 }
 .all-head .search {
   position: absolute;
-  width: 4.45333333rem;
+  width: 60%;
   height: 0.85333333rem;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 0.42666667rem;
@@ -251,6 +251,7 @@ img {
   height: 1.76rem;
   border-radius: 0.13333333rem;
   position: relative;
+  overflow: hidden;
 }
 .all-list .assets-img .tag {
   position: absolute;
@@ -312,7 +313,7 @@ img {
   z-index: 2;
   top: 1.2rem;
   width: 10rem;
-  background: #f3f5f9;
+  background: #e5eef8;
   font-size: 0.34666667rem;
 }
 .all-choose .choose-list li {

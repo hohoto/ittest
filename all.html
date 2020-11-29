@@ -30,26 +30,27 @@
       <div class="all-nav">
         <ul class="all-navlist clearfix">
           <li class="current">
-            <a href=""> 全部(99) </a>
+            <a href="javascript:;"> 全部(99) </a>
           </li>
           <li>
-            <a href=""> 闲置 </a>
+            <a href="javascript:;"> 闲置 </a>
           </li>
           <li>
-            <a href=""> 在用 </a>
+            <a href="javascript:;"> 在用 </a>
           </li>
           <li>
-            <a href=""> 借用 </a>
+            <a href="javascript:;"> 借用 </a>
           </li>
           <li>
-            <a href=""> 借用 </a>
+            <a href="javascript:;"> 借用 </a>
           </li>
           <li>
-            <a href=""> 借用 </a>
+            <a href="javascript:;"> 借用 </a>
           </li>
         </ul>
         <div class="fr all-filter">
           <span class="black">筛选</span>
+          <i class="iconfont icon-shaixuan gray font14"></i>
         </div>
       </div>
       <!-- 筛选 -->
@@ -174,6 +175,9 @@
       $(function () {
         $('.sort').on('click', function () {
           $(this).closest('.all-choose').find('.choose-list').toggle()
+        })
+        $('.all-nav li').on('click',function(){
+          $(this).addClass('current').siblings('li').removeClass('current')
         })
       })
     </script>
