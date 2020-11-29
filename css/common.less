@@ -1,0 +1,154 @@
+@charset "UTF-8";
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14rem / @b;
+  font-family: 'Microsoft YaHei', sans-serif;
+  background-color: #f3f5f9;
+}
+a {
+  color: #60656e;
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+input[type='text'],
+input[type='search'],
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+.vm {
+  vertical-align: middle;
+}
+@b: 37.5;
+.mt5 {
+  margin-top: 5rem / @b;
+}
+.mt10 {
+  margin-top: 10rem / @b;
+}
+.mt15 {
+  margin-top: 15rem / @b;
+}
+.mt20 {
+  margin-top: 20rem / @b;
+}
+.ml10 {
+  margin-left: 10rem / @b;
+}
+.ml15 {
+  margin-left: 15rem / @b;
+}
+.ml30 {
+  margin-left: 30rem / @b;
+}
+.mr5 {
+  margin-right: 5rem / @b;
+}
+.mr10 {
+  margin-right: 10rem / @b;
+}
+.mr15 {
+  margin-right: 15rem / @b;
+}
+.mr30 {
+  margin-right: 30rem / @b;
+}
+.gray {
+  color: #abb0bd;
+}
+.black {
+  color: #000;
+}
+.blue {
+  color: #5855fe;
+}
+.red {
+  color: #ec1c3f;
+}
+.font12 {
+  font-size: 12rem / @b;
+}
+.font13 {
+  font-size: 13rem / @b;
+}
+.font14 {
+  font-size: 14rem / @b;
+}
+.font16 {
+  font-size: 16rem / @b;
+}
+.font18 {
+  font-size: 18rem / @b;
+}
+.font20 {
+  font-size: 20rem / @b;
+}
+.font22 {
+  font-size: 22rem / @b;
+}
+.font24 {
+  font-size: 24rem / @b;
+}
+.svg_icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  overflow: hidden;
+}
+.bor-t {
+  border-top: 1rem / @b solid #f3f5f9;
+}
+.hide {
+  display: none;
+}
+.it-btn {
+  display: inline-block;
+  width: 83rem / @b;
+  height: 28rem / @b;
+  border-radius: 14rem / @b;
+  border: 1rem / @b solid #abb0bd;
+  font-size: 12rem / @b;
+  color: #60656e;
+  padding: 5rem / @b 15rem / @b;
+}
+.it-btn.blue {
+  color: #5855fe;
+  border: 1rem / @b solid #5855fe;
+}
+.bg-white {
+  background-color: #fff;
+}
+.bg-blue {
+  background-color: #f3f5f9;
+}
