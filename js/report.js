@@ -6,6 +6,7 @@ var chart = Highcharts.chart('report-chart', {
 			alpha: 45
 		}
   },
+  colors: ['#575af3', '#B37AFC', '#FF8738', '#FF6678', '#666'],
   credits: {
 		enabled:false
 	},
@@ -22,13 +23,13 @@ var chart = Highcharts.chart('report-chart', {
 		}
 	},
 	series: [{
-		name: '货物金额',
-		data: [
-			['在用', 8],
-			['闲置', 3],
-			['占用', 1],
-			['维修中', 6],
-			['清理报废', 8]
+		name: '',
+    data: [
+			['在用', 18],
+			['闲置', 20],
+			['占用', 33],
+			['维修中', 16],
+			['清理报废', 10]
 		]
 	}]
 });
