@@ -52,14 +52,11 @@ var REPORT = {
 			subtitle: {
 				text: ''
 			},
-<<<<<<< HEAD
-=======
 			tooltip: {
 				style: {
 					fontSize: 14
 				}
 			},
->>>>>>> 3844578c7b29cd8c0b256eb9287b3221b78b8cb8
 			plotOptions: {
 				pie: {
 					innerSize: 100,
