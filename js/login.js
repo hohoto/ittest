@@ -1,5 +1,5 @@
 var LOGIN = {
-    loginUrl:"/test1/testData/login",
+    loginUrl:"/user/login",
     login:function() {
         if(!$("input[name=userCode]").val() || !$("input[name=password]").val()){
             layer.msg("用户名密码不能为空", {
