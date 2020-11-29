@@ -133,13 +133,14 @@
 				margin: 0 auto;
 			}
 			.log-con .login_infor .code {
-				width: 216px;
+				float: left;
+				width: 228px;
 				display: inline-block;
-				margin-left: 6px;
 				padding: 0;
 				text-align: center;
 			}
 			.log-con #code {
+				float: left;
 				width: 94px;
 				display: inline-block;
 				margin-left: 14px;
@@ -190,11 +191,11 @@
 					<i class="icon iconfont icon-password"></i>
 					<input type="text" class="password" name="password" placeholder="请输入密码"/>
 				</li>
-				<li>
+				<li class="clearfix">
 					<input type="text" class="code" placeholder="请输入验证码"/>
 					<input type="button" id="code" onclick="change();"/>
 				</li>
-				<li>
+				<li class="clearfix">
 					<a id="login" class="btn-login">立即登录</a>
 				</li>
 			</ul>
@@ -359,6 +360,8 @@
 				code.val(codes);
 			}
 		</script>
+<script src="layui/layui.all.js"></script>
+
     <script type="text/javascript" src="js/conf.js"></script>
     <script type="text/javascript" src="js/user.js"></script>
 	<script type="text/javascript" src="js/login.js"></script>
