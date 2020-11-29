@@ -13,7 +13,8 @@
   </head>
 
   <body>
-    <div class="contaoner">
+  <input type="hidden" id="resourceId" name="resourceId" class="inputs">
+  <div class="contaoner">
       <!-- 头部 -->
       <div class="all-head">
         <div class="go-history clearfix">
@@ -98,10 +99,6 @@
           </div>
         </form>
 
-
-
-
-
         <form action="">
           <div class="com-title">使用信息</div>
           <div class="formlist">
@@ -122,10 +119,12 @@
       </div>
       <!-- 底部 -->
       <div class="add-footer">
-        <a href="" class="com-btn add-category">提交申请</a>
+        <a class="com-btn add-category">提交申请</a>
       </div>
     </div>
-    <script src="./js/baofei.js"></script>
+    <script type="text/javascript" src="./js/baofei.js"></script>
+    <script type="text/javascript" src="./js/conf.js"></script>
+    <script type="text/javascript" src="./js/user.js"></script>
     <script src="js/jquery.min.js"></script>
     <script>
         $(function(){
@@ -144,22 +143,29 @@
                     left:0
                 },500);
             });
-            @GetMapping("apply")
-            public Map apply(Date datenow, String usercode, Integer resourceid, String location, String recipientsmsg, String ApplyType) throws Exception {
-                Map map = new HashMap();
             $(".add-category").click(function(){
+                if(!USER.hasLogin()){
+                    window.location.href=window.ITM.jumpDomain+"login.html";
+                    return;
+                }
+                var user = USER.getUser();
+
                 $.ajax({
                     url: "http://47.103.65.135:8982/test1/testData/apply",
                     type:"post",
                     data:{
                         "datenow":new Date(),
-                        "password":$("input[name=password]").val()
+                        "usercode":user.userCode,
+                        "resourceid":$("#checked_type").value(),
+                        "location":"",
+                        "recipientsmsg":"",
+                        "ApplyType":"55"
                     },success:function(e){
-                        USER.setUser(e);
-                        window.location.href= window.ITM.jumpDomain + "index.html";
+                        window.location.href= window.ITM.jumpDomain+"chuzhiall.html";
                     }
                 })
-            })
+            });
+
         })
     </script>
   </body>
