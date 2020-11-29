@@ -17,7 +17,7 @@
       <!-- 头部 -->
       <div class="all-head">
         <div class="go-history clearfix">
-          <a href="./index.html" class="fl ml10">
+          <a href="./chuzhiall.html" class="fl ml10">
             <i class="iconfont icon-fanhui font20"></i>
           </a>
           <a class="fr mr10">
@@ -29,40 +29,138 @@
 
       <div class="from-info">
         <form action="">
+          <div class="formlist selectThis">
+            <ul>
+              <li class="spu">
+                <span>资产大类(SPU)</span>
+                <span class="fr mr30 gray"></span>
+                <i class="fr iconfont icon-gengduo gray"></i>
+              </li>
+              <li class="sku">
+                <span>资产分组(SKU)</span>
+                <span class="fr mr30 gray"></span>
+                <i class="fr iconfont icon-gengduo gray"></i>
+              </li>
+              <li class="resource">
+                <span>资产明细(D)</span>
+                <span class="fr mr30 gray"></span>
+                <i class="fr iconfont icon-gengduo gray"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="formlist selected spuSelected">
+            <ul>
+              <li>
+                <em class="round">#</em>
+                <span>笔记本电脑</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>打印机</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>证书</span>
+              </li>
+            </ul>
+          </div>
+          <div class="formlist selected skuSelected">
+            <ul>
+              <li>
+                <em class="round">#</em>
+                <span>ThinkPad</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>Mac</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>戴尔</span>
+              </li>
+            </ul>
+          </div>
+          <div class="formlist selected resourceSelected">
+            <ul>
+              <li>
+                <em class="round">#</em>
+                <span>E460 4G</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>2015 Retian</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>T410 12G</span>
+              </li>
+            </ul>
+          </div>
+        </form>
+
+
+
+
+
+        <form action="">
           <div class="com-title">使用信息</div>
           <div class="formlist">
             <ul>
               <li>
-                <span>选项</span>
-                <span class="fr mr30 gray">2020-11-27</span>
-                <i class="fr iconfont icon-gengduo gray"></i>
-              </li>
-              <li>
-                <span>借用人员</span>
-                <em class="red">*</em>
-                <input type="text" placeholder="请选择" />
-                <i class="iconfont icon-gengduo gray"></i>
-              </li>
-              <li>
-                <span>使用地点</span>
+                <span>清理人</span>
                 <input type="text" placeholder="请输入" />
                 <i class="iconfont icon-bianji gray"></i>
               </li>
               <li>
-                <span>用途</span>
+                <span>备注</span>
                 <input type="text" placeholder="请输入" />
                 <i class="iconfont icon-bianji gray"></i>
               </li>
             </ul>
           </div>
-          <div class="com-title">使用信息</div>
         </form>
       </div>
       <!-- 底部 -->
       <div class="add-footer">
-        <a href="" class="com-btn add-category">新增分类</a>
+        <a href="" class="com-btn add-category">提交申请</a>
       </div>
     </div>
     <script src="./js/baofei.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".selectThis .spu").click(function(){
+                $(".formlist.spuSelected").animate({
+                    left:0
+                },500);
+            });
+            $(".selectThis .sku").click(function(){
+                $(".formlist.skuSelected").animate({
+                    left:0
+                },500);
+            });
+            $(".selectThis .resource").click(function(){
+                $(".formlist.resourceSelected").animate({
+                    left:0
+                },500);
+            });
+            @GetMapping("apply")
+            public Map apply(Date datenow, String usercode, Integer resourceid, String location, String recipientsmsg, String ApplyType) throws Exception {
+                Map map = new HashMap();
+            $(".add-category").click(function(){
+                $.ajax({
+                    url: "http://47.103.65.135:8982/test1/testData/apply",
+                    type:"post",
+                    data:{
+                        "datenow":new Date(),
+                        "password":$("input[name=password]").val()
+                    },success:function(e){
+                        USER.setUser(e);
+                        window.location.href= window.ITM.jumpDomain + "index.html";
+                    }
+                })
+            })
+        })
+    </script>
   </body>
 </html>
