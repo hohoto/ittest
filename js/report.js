@@ -15,7 +15,12 @@ var chart = Highcharts.chart('report-chart', {
 	},
 	subtitle: {
 		text: ''
-	},
+  },
+  tooltip: {
+    style: {
+      fontSize: 14
+    }
+  },
 	plotOptions: {
 		pie: {
 			innerSize: 100,

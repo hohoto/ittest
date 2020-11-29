@@ -409,6 +409,7 @@ img {
   padding: 0 0.8rem 0 1.06666667rem;
   font-size: 0.42666667rem;
   color: #abb0bd;
+  box-sizing: border-box;
 }
 .search-con .icon-qingchu {
   position: absolute;
