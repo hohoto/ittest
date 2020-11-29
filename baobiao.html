@@ -68,7 +68,10 @@
         <li>
           <div class="fl mt5">
             <div>在用</div>
-            <div class="gray">{{percent(data["在用"],sum)}}%</div>
+            <div class="percent-con">
+              <div class="percent gray"></div>
+              <div class="perent-text">{{percent(data["在用"],sum)}}%</div>
+            </div>
           </div>
           <div class="fr report-num">
             <span class="mr30 font14">{{data["在用"]}}<span class="ml10 font12">个</span></span>
@@ -78,7 +81,10 @@
         <li>
           <div class="fl mt5">
             <div>闲置</div>
-            <div class="gray">{{percent(data["闲置"],sum)}}%</div>
+            <div class="percent-con">
+              <div class="percent gray"></div>
+              <div class="perent-text">{{percent(data["闲置"],sum)}}%</div>
+            </div>
           </div>
           <div class="fr report-num">
             <span class="mr30 font14">{{data["闲置"]}}<span class="ml10 font12">个</span></span>
@@ -88,7 +94,10 @@
         <li>
           <div class="fl mt5">
             <div>占用</div>
-            <div class="gray">{{percent(data["占用"],sum)}}%</div>
+            <div class="percent-con">
+              <div class="percent gray"></div>
+              <div class="perent-text">{{percent(data["占用"],sum)}}%</div>
+            </div>
           </div>
           <div class="fr report-num">
             <span class="mr30 font14">{{data['占用']}}<span class="ml10 font12">个</span></span>
@@ -98,7 +107,10 @@
         <li>
           <div class="fl mt5">
             <div>维修中</div>
-            <div class="gray">{{percent(data['维修'],sum)}}%</div>
+            <div class="percent-con">
+              <div class="percent gray"></div>
+              <div class="perent-text">{{percent(data["维修"],sum)}}%</div>
+            </div>
           </div>
           <div class="fr report-num">
             <span class="mr30 font14">{{data['维修']}}<span class="ml10 font12">个</span></span>
@@ -108,7 +120,10 @@
         <li>
           <div class="fl mt5">
             <div>清理报废</div>
-            <div class="gray">{{percent(data['处置'],sum)}}%</div>
+            <div class="percent-con">
+              <div class="percent gray"></div>
+              <div class="perent-text">{{percent(data["处置"],sum)}}%</div>
+            </div>
           </div>
           <div class="fr report-num">
             <span class="mr30 font14">{{data['处置']}}<span class="ml10 font12">个</span></span>
