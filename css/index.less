@@ -18,9 +18,9 @@
     background-color: #d4e3f573;
     overflow: hidden;
   }
-  .chart{
-    width: 972px!important;
-  }
+  // .chart{
+  //   width: 972px!important;
+  // }
   .it-footer,.all-footer,.add-footer{
     width: 1024px!important;
   }
@@ -52,18 +52,25 @@
     left: 15rem / @b;
     color: #fff;
     font-size: 20rem / @b;
+    height: 60rem/@b;
+    overflow: hidden;
+    .name{
+      display: inline-block;
+      margin-right:10rem/@b;
+      max-width: 220rem/@b;
+    }
   }
   .admin {
     display: inline-block;
     color: #5855fe;
-    padding: 0 5rem / @b;
+    // width: 47rem / @b;
+    padding:0 10rem/@b;
     height: 22rem / @b;
     line-height: 22rem / @b;
     background-color: #ffffff;
     border-radius: 4rem / @b;
     font-size: 13rem / @b;
     text-align: center;
-    margin-left: 5rem / @b;
     vertical-align: middle;
   }
   .company {
@@ -71,16 +78,18 @@
   }
 }
 .chart {
-  width: 345rem / @b;
+  // width: 345rem / @b;
   height: 307rem / @b;
   background: #ffffff;
   border-radius: 16rem / @b;
   position: absolute;
   top: 138rem / @b;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 15rem / @b;
+  right: 15rem / @b;
+  bottom: 15rem / @b;
   .money {
     margin: 20rem / @b 15rem / @b 0 15rem / @b;
+    height:30rem/@b;
     font-size: 17rem / @b;
     .money-txt {
       color: #040a15;
@@ -96,6 +105,13 @@
       color: #60656e;
       font-size: 12rem / @b;
     }
+  }
+  .chart_pos{
+    position: absolute;
+    top:50rem/@b;
+    left:10rem/@b;
+    bottom:15rem/@b;
+    right:10rem/@b;
   }
   .money-chart{
     width: 100%;

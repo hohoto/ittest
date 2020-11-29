@@ -63,7 +63,7 @@ var chart = Highcharts.chart('money-chart', {
 				[1, '#E84769']
 			]
 		},
-		pointWidth:point_Width
+		pointWidth:30
 	}],
 	responsive: {
 		rules: [{
@@ -98,7 +98,7 @@ var INDEX = {
 		var tplData = {
 			user:user
 		}
-		$("#userInfo").innerHTML = template("userInfo_tpl",tplData);
+		$("#userInfo")[0].innerHTML = template("userInfo_tpl",tplData);
 	},
 	init:function(){
 		this.load();

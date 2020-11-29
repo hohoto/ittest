@@ -201,10 +201,11 @@ img {
   width: 100%;
   top: 0;
   left: 100%;
+  box-sizing: border-box;
 }
 .from-info .formlist.ani_left {
   left: 0%;
-  animation: all 1s linear;
+  animation: all 30s linear;
 }
 .add-head {
   width: 10rem;
@@ -286,6 +287,7 @@ img {
   font-size: 0.42666667rem;
   position: absolute;
   right: 0.13333333rem;
+  cursor: pointer;
 }
 .formlist li .error {
   text-align: right;
@@ -313,6 +315,7 @@ img {
   position: fixed;
   text-align: center;
   bottom: 0;
+  background-color: #F3F5F9;
 }
 .add-footer .add-save {
   background-color: #5855fe;

@@ -26,7 +26,7 @@ var chart = Highcharts.chart('report-chart', {
 		data: [
 			['在用', 8],
 			['闲置', 3],
-			['调拨中', 1],
+			['占用', 1],
 			['维修中', 6],
 			['清理报废', 8]
 		]

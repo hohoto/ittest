@@ -35,10 +35,15 @@ td {
   font-family: '-apple-system', 'BlinkMacSystemFont', 'PingFang SC', 'Hiragino Sans GB', 'Roboto', 'Arial', 'Microsoft YaHei', 'sans-serif' !important;
   list-style: none;
 }
+i,
+em {
+  font-style: normal;
+}
 body {
   font-size: 0.37333333rem;
   font-family: 'Microsoft YaHei', sans-serif;
   background-color: #f3f5f9;
+  overflow-x: hidden;
 }
 a {
   color: #60656e;
@@ -69,6 +74,12 @@ textarea {
   height: 0;
   line-height: 0;
   clear: both;
+}
+.w50 {
+  width: 50%;
+}
+.tc {
+  text-align: center;
 }
 img {
   display: block;
@@ -146,6 +157,9 @@ img {
 .font24 {
   font-size: 0.64rem;
 }
+.font30 {
+  font-size: 0.8rem;
+}
 .svg_icon {
   width: 1em;
   height: 1em;
@@ -188,10 +202,11 @@ img {
   width: 100%;
   top: 0;
   left: 100%;
+  box-sizing: border-box;
 }
 .from-info .formlist.ani_left {
   left: 0%;
-  animation: all 1s linear;
+  animation: all 30s linear;
 }
 .contaoner {
   width: 100%;
@@ -209,9 +224,6 @@ img {
     margin: 0 auto;
     background-color: #d4e3f573;
     overflow: hidden;
-  }
-  .chart {
-    width: 972px!important;
   }
   .it-footer,
   .all-footer,
@@ -245,35 +257,42 @@ img {
   left: 0.4rem;
   color: #fff;
   font-size: 0.53333333rem;
+  height: 1.6rem;
+  overflow: hidden;
+}
+.it-header .who .name {
+  display: inline-block;
+  margin-right: 0.26666667rem;
+  max-width: 5.86666667rem;
 }
 .it-header .admin {
   display: inline-block;
   color: #5855fe;
-  padding: 0 0.13333333rem;
+  padding: 0 0.26666667rem;
   height: 0.58666667rem;
   line-height: 0.58666667rem;
   background-color: #ffffff;
   border-radius: 0.10666667rem;
   font-size: 0.34666667rem;
   text-align: center;
-  margin-left: 0.13333333rem;
   vertical-align: middle;
 }
 .it-header .company {
   font-size: 0.4rem;
 }
 .chart {
-  width: 9.2rem;
   height: 8.18666667rem;
   background: #ffffff;
   border-radius: 0.42666667rem;
   position: absolute;
   top: 3.68rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0.4rem;
+  right: 0.4rem;
+  bottom: 0.4rem;
 }
 .chart .money {
   margin: 0.53333333rem 0.4rem 0 0.4rem;
+  height: 0.8rem;
   font-size: 0.45333333rem;
 }
 .chart .money .money-txt {
@@ -289,6 +308,13 @@ img {
 .chart .money .money-number {
   color: #60656e;
   font-size: 0.32rem;
+}
+.chart .chart_pos {
+  position: absolute;
+  top: 1.33333333rem;
+  left: 0.26666667rem;
+  bottom: 0.4rem;
+  right: 0.26666667rem;
 }
 .chart .money-chart {
   width: 100%;
