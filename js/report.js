@@ -33,7 +33,7 @@ var REPORT = {
 	loadNumber:function(){
 		$.ajax({
 			url:window.ITM.restDomain+"/pandian/queryPandianInfo",
-			type:"post",
+			type:"get",
 			dataType:"json",
 			data:{},
 			success:function(e){
