@@ -35,6 +35,10 @@ td {
   font-family: '-apple-system', 'BlinkMacSystemFont', 'PingFang SC', 'Hiragino Sans GB', 'Roboto', 'Arial', 'Microsoft YaHei', 'sans-serif' !important;
   list-style: none;
 }
+i,
+em {
+  font-style: normal;
+}
 body {
   font-size: 0.37333333rem;
   font-family: 'Microsoft YaHei', sans-serif;
@@ -188,8 +192,9 @@ img {
   width: 100%;
   top: 0;
   left: 100%;
+  box-sizing: border-box;
 }
 .from-info .formlist.ani_left {
   left: 0%;
-  animation: all 1s linear;
+  animation: all 30s linear;
 }

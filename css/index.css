@@ -35,6 +35,10 @@ td {
   font-family: '-apple-system', 'BlinkMacSystemFont', 'PingFang SC', 'Hiragino Sans GB', 'Roboto', 'Arial', 'Microsoft YaHei', 'sans-serif' !important;
   list-style: none;
 }
+i,
+em {
+  font-style: normal;
+}
 body {
   font-size: 0.37333333rem;
   font-family: 'Microsoft YaHei', sans-serif;
@@ -188,10 +192,11 @@ img {
   width: 100%;
   top: 0;
   left: 100%;
+  box-sizing: border-box;
 }
 .from-info .formlist.ani_left {
   left: 0%;
-  animation: all 1s linear;
+  animation: all 30s linear;
 }
 .contaoner {
   width: 100%;
@@ -209,9 +214,6 @@ img {
     margin: 0 auto;
     background-color: #d4e3f573;
     overflow: hidden;
-  }
-  .chart {
-    width: 972px!important;
   }
   .it-footer,
   .all-footer,
@@ -263,16 +265,18 @@ img {
   font-size: 0.4rem;
 }
 .chart {
-  width: 9.2rem;
   height: 8.18666667rem;
   background: #ffffff;
   border-radius: 0.42666667rem;
   position: absolute;
   top: 3.68rem;
   left: 0.4rem;
+  right: 0.4rem;
+  bottom: 0.4rem;
 }
 .chart .money {
   margin: 0.53333333rem 0.4rem 0 0.4rem;
+  height: 0.8rem;
   font-size: 0.45333333rem;
 }
 .chart .money .money-txt {
@@ -288,6 +292,13 @@ img {
 .chart .money .money-number {
   color: #60656e;
   font-size: 0.32rem;
+}
+.chart .chart_pos {
+  position: absolute;
+  top: 1.33333333rem;
+  left: 0.26666667rem;
+  bottom: 0.4rem;
+  right: 0.26666667rem;
 }
 .chart .money-chart {
   width: 100%;

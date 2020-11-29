@@ -16,7 +16,7 @@
       <!-- 头部 -->
       <div class="add-head">
         <div class="go-history clearfix">
-          <a href="./index.html" class="fl ml5">
+          <a href="javascript:" class="fl ml5">
             <i class="iconfont icon-fanhui font20 vm"></i>
             <span class="font16 vm"> 属性设置</span>
           </a>
@@ -88,6 +88,11 @@
         $(".selectThis li").click(function(){
           $(".formlist.selected").animate({
             left:0
+          },500);
+        })
+        $(".go-history a").click(function(){
+          $(".formlist.selected").animate({
+            left:"100%"
           },500);
         })
       })
