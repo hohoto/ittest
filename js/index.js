@@ -92,7 +92,7 @@ var INDEX = {
 		var tplData = {
 			user:user
 		}
-		$("#userInfo").innerHTML = template("userInfo_tpl",tplData);
+		$("#userInfo")[0].innerHTML = template("userInfo_tpl",tplData);
 	},
 	init:function(){
 		this.load();
