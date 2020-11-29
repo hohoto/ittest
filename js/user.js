@@ -1,4 +1,4 @@
-USER = {
+var USER = {
     getUser:function(){
         return localStorage.getItem("user");
     },
@@ -13,4 +13,4 @@ USER = {
         if(Object.keys(user).length>0) return true;
         return false;
     }
-}
+};
