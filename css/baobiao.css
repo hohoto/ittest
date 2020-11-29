@@ -35,8 +35,9 @@ td {
   font-family: '-apple-system', 'BlinkMacSystemFont', 'PingFang SC', 'Hiragino Sans GB', 'Roboto', 'Arial', 'Microsoft YaHei', 'sans-serif' !important;
   list-style: none;
 }
+i,
 em {
-  font-style: inherit;
+  font-style: normal;
 }
 body {
   font-size: 0.37333333rem;
@@ -201,10 +202,11 @@ img {
   width: 100%;
   top: 0;
   left: 100%;
+  box-sizing: border-box;
 }
 .from-info .formlist.ani_left {
   left: 0%;
-  animation: all 1s linear;
+  animation: all 30s linear;
 }
 .report .it-header {
   height: 7.2rem;
@@ -242,7 +244,7 @@ img {
   display: block;
   width: 0.32rem;
   height: 0.32rem;
-  background-color: #A9C8EE;
+  background-color: #575af3;
   position: absolute;
   top: 50%;
   left: 0;
@@ -271,10 +273,10 @@ img {
   background-color: #FF6678;
 }
 .report .report-list2 li:nth-child(5)::before {
-  background-color: #8385F5;
+  background-color: #666;
 }
 .report .report-list2 .report-num {
-  line-height: 1.04rem;
+  line-height: 1.01333333rem;
 }
 .report-head {
   position: absolute;
