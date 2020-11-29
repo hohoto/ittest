@@ -208,6 +208,7 @@ img {
   overflow: hidden;
 }
 .formlist li {
+  position: relative;
   width: 100%;
   min-height: 1.6rem;
   line-height: 0.8rem;
@@ -225,7 +226,7 @@ img {
 .formlist li .icon-bianji {
   font-size: 0.42666667rem;
   position: absolute;
-  right: 0.53333333rem;
+  right: 0.13333333rem;
 }
 .formlist li .error {
   text-align: right;

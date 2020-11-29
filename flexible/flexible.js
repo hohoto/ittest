@@ -15,7 +15,16 @@
 
   // set 1rem = viewWidth / 10
   function setRemUnit () {
-    var rem = docEl.clientWidth / 10
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      // window.location.href="你的手机版地址";
+      var rem = docEl.clientWidth / 10
+}
+  else {
+      // window.location.href="你的电脑版地址";  
+      var rem = docEl.clientWidth / 20
+      }
+
+    // var rem = docEl.clientWidth / 10
     docEl.style.fontSize = rem + 'px'
   }
 

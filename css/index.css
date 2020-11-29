@@ -158,6 +158,37 @@ img {
   margin: 0 auto;
   background-color: #f3f5f9;
 }
+@media screen and (min-width: 900px) {
+  .contaoner {
+    width: 1024px;
+    max-width: 20rem;
+    min-width: 8.53333333rem;
+    margin: 0 auto;
+    background-color: #d4e3f573;
+    overflow: hidden;
+  }
+  .chart {
+    width: 972px!important;
+  }
+  .it-footer,
+  .all-footer,
+  .add-footer {
+    width: 1024px!important;
+  }
+  .all-head {
+    width: auto!important;
+  }
+  .all-nav {
+    width: 100%!important;
+  }
+  .all-list .assets-list {
+    width: 100%!important;
+  }
+  .add-head,
+  .photo {
+    width: 100%!important;
+  }
+}
 .it-header {
   width: 100%;
   height: 7.76rem;
@@ -217,7 +248,7 @@ img {
 }
 .it-nav-two,
 .it-nav {
-  width: 9.2rem;
+  margin: 0 0.4rem;
   height: 4.42666667rem;
   background-color: #ffffff;
   border-radius: 0.42666667rem;
@@ -241,12 +272,11 @@ img {
   display: block;
 }
 .it-nav {
-  margin: 4.37333333rem auto 0;
+  margin-top: 4.37333333rem;
 }
 .it-nav-two {
-  width: 9.2rem;
   height: 2.37333333rem;
-  margin: 0.26666667rem auto 3.2rem;
+  margin-top: 0.26666667rem;
   margin-bottom: 2.66666667rem;
 }
 .it-footer {
@@ -298,7 +328,7 @@ img {
   position: relative;
 }
 .search-con .search-input {
-  width: 9.2rem;
+  width: 100%;
   height: 0.85333333rem;
   background-color: #f3f5f9;
   border-radius: 0.42666667rem;
@@ -347,7 +377,6 @@ img {
   border: 0.02666667rem solid #5855fe;
 }
 .from-nav {
-  width: 10rem;
   height: 1.17333333rem;
   line-height: 1.17333333rem;
   background-color: #ffffff;
