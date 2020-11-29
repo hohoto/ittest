@@ -35,13 +35,14 @@ td {
   font-family: '-apple-system', 'BlinkMacSystemFont', 'PingFang SC', 'Hiragino Sans GB', 'Roboto', 'Arial', 'Microsoft YaHei', 'sans-serif' !important;
   list-style: none;
 }
+i,
 em {
-  font-style: inherit;
+  font-style: normal;
 }
 body {
   font-size: 0.37333333rem;
   font-family: 'Microsoft YaHei', sans-serif;
-  background-color: #f3f5f9;
+  background-color: #f1f1f1;
   overflow-x: hidden;
 }
 a {
@@ -315,7 +316,7 @@ img {
   position: fixed;
   text-align: center;
   bottom: 0;
-  background-color: #F3F5F9;
+  background-color: #f3f5f9;
 }
 .add-footer .add-save {
   background-color: #5855fe;
