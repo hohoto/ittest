@@ -182,3 +182,22 @@ img {
 .bg-blue {
   background-color: #f3f5f9;
 }
+/*公共的选项*/
+.from-info{
+  position: relative;
+  .formlist{
+    &.selected{
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 100%;
+      
+    }
+    &.ani_left{
+      left:0%;
+      animation: all 1s linear;
+    }
+  }
+  
+
+}
