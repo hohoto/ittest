@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>新增盘点</title>
+    <link rel="stylesheet" href="./fonts/iconfont.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="css/add-new.css" />
+  </head>
+
+  <body>
+    <div class="contaoner">
+      <!-- 头部 -->
+      <div class="add-head">
+        <div class="go-history clearfix">
+          <a href="./pandiandetail.html" class="fl ml5">
+            <i class="iconfont icon-fanhui font20 vm"></i>
+            <span class="font16 vm"> 新增盘点</span>
+          </a>
+        </div>
+      </div>
+      <div class="com-title">盘点单概况</div>
+      <div class="from-info">
+        <form action="">
+          <div class="formlist">
+            <ul>
+              <li>
+                <span>盘点物品类型</span>
+                <em class="red">*</em>
+                <input type="text" placeholder="请输入" id="pandianCode"/>
+                <i class="iconfont icon-bianji gray"></i>
+              </li>
+              <li>
+                <span>资源ID</span>
+                <em class="red">*</em>
+                <input type="text" placeholder="请输入" id="planBeginDate" />
+                <i class="iconfont icon-bianji gray"></i>
+              </li>
+              <li>
+                <span>存放地</span>
+                <em class="red">*</em>
+                <input type="text" placeholder="请输入" id="planEndDate"/>
+                <i class="iconfont icon-bianji gray"></i>
+              </li>
+                <i class="iconfont icon-gengduo gray"></i>
+              </li>
+            </ul>
+          </div>
+      <!-- 底部 -->
+      <div class="add-footer bg-blue">
+        <a href="javascript:;" class="com-btn add-save" id="createpandian">新增</a>
+      </div>
+    </div>
+
+    <script src="./flexible/flexible.js"></script>
+    <script src="./fonts/iconfont.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/pandian/createpandiandetail.js"></script>
+    <script type="text/javascript" src="js/conf.js"></script>
+  </body>
+</html>
