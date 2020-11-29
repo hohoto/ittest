@@ -1,6 +1,12 @@
 var LOGIN = {
     loginUrl:"/test1/testData/login",
     login:function() {
+        if(!$("input[name=userCode]").val() || !$("input[name=password]").val()){
+            layer.msg("用户名密码不能为空", {
+                time: 2000
+            });
+            return ;
+        }
         $.ajax({
             url:window.ITM.restDomain+ this.loginUrl,
             type:"post",
@@ -8,20 +14,20 @@ var LOGIN = {
                 "usercode":$("input[name=userCode]").val(),
                 "password":$("input[name=password]").val()
             },success:function(e){
-                e = {
-                    name:"yinyufeng",
-                    companyname:"测试公司",
-                    rolename:"测试角色"
-                };
-                 if(e) {
+                if(e && Object.keys(e).length>0){
                      USER.setUser(e);
                      window.location.href = window.ITM.jumpDomain + "index.html";
-                 }
+                 }else{
+                    e = {
+                        name:"yinyufeng",
+                        companyname:"测试公司",
+                        rolename:"测试角色"
+                    };
+                    window.location.href = window.ITM.jumpDomain + "index.html";
+                }
             },error:function(){
-                USER.setUser({
-                    name:"yinyufeng",
-                    companyname:"测试公司",
-                    rolename:"测试角色"
+                layer.msg("登陆失败", {
+                    time: 2000
                 });
             }
         })

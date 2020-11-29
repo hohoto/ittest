@@ -26,15 +26,17 @@
             <i class="iconfont icon-fanhui font20 vm"></i>
           </a>
         </div>
-        <div class="mt15 tongji clearfix tc">
-          <div class="w50 fl">
-            <div class="font12">待盘点任务</div>
-            <div class="font30">10 <em class="font12">个</em></div>
-          </div>
-          <div class="w50 fl">
-            <div class="font12">待盘点任务</div>
-            <div class="font30">10 <em class="font12">条</em></div>
-          </div>
+        <div class="mt15 tongji clearfix tc" id="dpd">
+          <script type="text/html" id="dpd_tpl">
+            <div class="w50 fl">
+              <div class="font12">待盘点任务</div>
+              <div class="font30">{{dpdRwCount}} <em class="font12">个</em></div>
+            </div>
+            <div class="w50 fl">
+              <div class="font12">待盘点任务</div>
+              <div class="font30">{{dpdZyCount}} <em class="font12">条</em></div>
+            </div>
+          </script>
         </div>
         <div class="baobiao mt20">
           资产报表
@@ -165,6 +167,7 @@
   </div>
   <script src="./js/jquery.min.js"></script>
   <script src="./js/template.js"></script>
+  <script src="layui/layui.all.js"></script>
 
   <script src="./js/conf.js"></script>
   <script src="./js/user.js"></script>

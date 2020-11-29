@@ -1,13 +1,18 @@
 
 var REPORT = {
 	init:function(){
+		if(!USER.hasLogin()){
+			window.location.href=window.ITM.jumpDomain+"login.html";
+			return;
+		}
 		template.helper("percent",function(a,b){
 			return Math.round(parseFloat(a)/b*100);
 		})
-		this.load();
+		this.loadChart();
+		this.loadNumber();
 		return this;
 	},
-	load:function(){
+	loadChart:function(){
 		var _this = this;
 		$.ajax({
 			url:window.ITM.restDomain + "/report/groupByStatus",
@@ -18,8 +23,30 @@ var REPORT = {
                _this.chart(e);
                _this.list(e);
 			},error:function(){
+				layer.msg("网络异常！", {
+					time: 2000
+				});
 				_this.chart();
 				_this.list();
+			}
+		});
+	},
+	loadNumber:function(){
+		$.ajax({
+			url:window.ITM.restDomain+"/pandian/queryPandianInfo",
+			type:"post",
+			dataType:"json",
+			data:{},
+			success:function(e){
+				if(e && Object.keys(e).length){
+				}else{
+					e= {"dpdRwCount":0,"dpdZyCount":0};
+				}
+				$("#dpd").html(template("dpd_tpl",e));
+			},error:function(){
+				var e= {"dpdRwCount":0,"dpdZyCount":0};
+      			$("#dpd").html(template("dpd_tpl",e));
+				layer.msg("网络异常",{time:2000});
 			}
 		})
 	},
