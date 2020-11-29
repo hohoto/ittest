@@ -18,9 +18,9 @@
     background-color: #d4e3f573;
     overflow: hidden;
   }
-  .chart{
-    width: 972px!important;
-  }
+  // .chart{
+  //   width: 972px!important;
+  // }
   .it-footer,.all-footer,.add-footer{
     width: 1024px!important;
   }
@@ -71,15 +71,18 @@
   }
 }
 .chart {
-  width: 345rem / @b;
+  // width: 345rem / @b;
   height: 307rem / @b;
   background: #ffffff;
   border-radius: 16rem / @b;
   position: absolute;
   top: 138rem / @b;
   left: 15rem / @b;
+  right: 15rem / @b;
+  bottom: 15rem / @b;
   .money {
     margin: 20rem / @b 15rem / @b 0 15rem / @b;
+    height:30rem/@b;
     font-size: 17rem / @b;
     .money-txt {
       color: #040a15;
@@ -95,6 +98,13 @@
       color: #60656e;
       font-size: 12rem / @b;
     }
+  }
+  .chart_pos{
+    position: absolute;
+    top:50rem/@b;
+    left:10rem/@b;
+    bottom:15rem/@b;
+    right:10rem/@b;
   }
   .money-chart{
     width: 100%;
