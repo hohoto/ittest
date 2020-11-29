@@ -183,7 +183,7 @@
 			<ul class="login_infor">
 				<li class="">
 					<i class="icon iconfont icon-username"></i>
-					<input type="text" class="name" placeholder="请输入用户名"/>
+					<input type="text" class="userCode" placeholder="请输入用户名"/>
 				</li>
 				<li>
 					<i class="icon iconfont icon-password"></i>
@@ -194,7 +194,7 @@
 					<input type="button" id="code" onclick="change();"/>
 				</li>
 				<li>
-					<a class="btn-login">立即登录</a>
+					<a id="login" class="btn-login">立即登录</a>
 				</li>
 			</ul>
         </div>
@@ -358,5 +358,8 @@
 				code.val(codes);
 			}
 		</script>
+    <script type="text/javascript" src="js/conf.js"/>
+    <script type="text/javascript" src="js/user.js" />
+	<script type="text/javascript" src="js/login.js" />
 	</body>
 </html>
