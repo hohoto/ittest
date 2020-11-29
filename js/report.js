@@ -1,4 +1,3 @@
-
 var REPORT = {
 	init:function(){
 		template.helper("percent",function(a,b){
@@ -7,7 +6,6 @@ var REPORT = {
 		this.load();
 		return this;
 	},
-<<<<<<< HEAD
 	load:function(){
 		var _this = this;
 		$.ajax({
@@ -29,21 +27,8 @@ var REPORT = {
 		var sum = 0;
 		for(var i in data){
 			sum += data[i];
-=======
-	subtitle: {
-		text: ''
-  },
-  tooltip: {
-    style: {
-      fontSize: 14
-    }
-  },
-	plotOptions: {
-		pie: {
-			innerSize: 100,
-			depth: 45
->>>>>>> 89e8b5efbc04639a280a72c3e1236f3f29b612ea
-		}
+			
+	}
 		$("#reportList").html(template("reportList_tpl",{data:data,sum:sum}));
 	},
 	chart:function(data){
@@ -65,13 +50,13 @@ var REPORT = {
 		title: {
 			text: ''
 		},
-		subtitle: {
-			text: ''
-		},
-		plotOptions: {
-			pie: {
-				innerSize: 100,
-				depth: 45
+			subtitle: {
+				text: ''
+			},
+			plotOptions: {
+				pie: {
+					innerSize: 100,
+					depth: 45
 			}
 		},
 		series: [{
