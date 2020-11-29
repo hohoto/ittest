@@ -62,59 +62,61 @@
       <div class="font12 gray">当前资产使用情况</div>
       <div class="mt10 report-chart" id="report-chart"></div>
     </div>
-    <div class="formlist report-list2">
+    <div class="formlist report-list2" id="reportList">
+      <script type="text/html" id="reportList_tpl">
       <ul>
         <li>
           <div class="fl mt5">
             <div>在用</div>
-            <div class="gray">68%</div>
+            <div class="gray">{{percent(data["在用"],sum)}}%</div>
           </div>
           <div class="fr report-num">
-            <span class="mr30 font14">56<span class="ml10 font12">个</span></span>
+            <span class="mr30 font14">{{data["在用"]}}<span class="ml10 font12">个</span></span>
             <i class="fr iconfont icon-gengduo gray"></i>
           </div>
         </li>
         <li>
           <div class="fl mt5">
             <div>闲置</div>
-            <div class="gray">68%</div>
+            <div class="gray">{{percent(data["闲置"],sum)}}%</div>
           </div>
           <div class="fr report-num">
-            <span class="mr30 font14">56<span class="ml10 font12">个</span></span>
+            <span class="mr30 font14">{{data["闲置"]}}<span class="ml10 font12">个</span></span>
             <i class="fr iconfont icon-gengduo gray"></i>
           </div>
         </li>
         <li>
           <div class="fl mt5">
             <div>占用</div>
-            <div class="gray">68%</div>
+            <div class="gray">{{percent(data["占用"],sum)}}%</div>
           </div>
           <div class="fr report-num">
-            <span class="mr30 font14">56<span class="ml10 font12">个</span></span>
+            <span class="mr30 font14">{{data['占用']}}<span class="ml10 font12">个</span></span>
             <i class="fr iconfont icon-gengduo gray"></i>
           </div>
         </li>
         <li>
           <div class="fl mt5">
             <div>维修中</div>
-            <div class="gray">68%</div>
+            <div class="gray">{{percent(data['维修'],sum)}}%</div>
           </div>
           <div class="fr report-num">
-            <span class="mr30 font14">56<span class="ml10 font12">个</span></span>
+            <span class="mr30 font14">{{data['维修']}}<span class="ml10 font12">个</span></span>
             <i class="fr iconfont icon-gengduo gray"></i>
           </div>
         </li>
         <li>
           <div class="fl mt5">
             <div>清理报废</div>
-            <div class="gray">68%</div>
+            <div class="gray">{{percent(data['处置'],sum)}}%</div>
           </div>
           <div class="fr report-num">
-            <span class="mr30 font14">56<span class="ml10 font12">个</span></span>
+            <span class="mr30 font14">{{data['处置']}}<span class="ml10 font12">个</span></span>
             <i class="fr iconfont icon-gengduo gray"></i>
           </div>
         </li>
       </ul>
+      </script>
     </div>
    
     <!-- 底部 -->
@@ -161,6 +163,11 @@
     </div>
   </div>
   </div>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/template.js"></script>
+
+  <script src="./js/conf.js"></script>
+  <script src="./js/user.js"></script>
   <script src="./js/report.js"></script>
 </body>
 
