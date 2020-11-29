@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>2020It-Game</title>
+    <link rel="stylesheet" href="./fonts/iconfont.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/add-new.css" />
+    <script src="./flexible/flexible.js"></script>
+    <script src="./fonts/iconfont.js"></script>
+  </head>
+
+  <body>
+  <input type="hidden" id="resourceId" name="resourceId" class="inputs">
+  <div class="contaoner">
+      <!-- 头部 -->
+      <div class="all-head">
+        <div class="go-history clearfix">
+          <a href="./chuzhiall.html" class="fl ml10">
+            <i class="iconfont icon-fanhui font20"></i>
+          </a>
+          <a class="fr mr10">
+            <i class="iconfont icon-saoyisao font20"></i>
+          </a>
+        </div>
+        <input type="text" class="search" placeholder="暗提示" />
+      </div>
+
+      <div class="from-info">
+        <form action="">
+          <div class="formlist selectThis">
+            <ul>
+              <li class="spu">
+                <span>资产大类(SPU)</span>
+                <span class="fr mr30 gray"></span>
+                <i class="fr iconfont icon-gengduo gray"></i>
+              </li>
+              <li class="sku">
+                <span>资产分组(SKU)</span>
+                <span class="fr mr30 gray"></span>
+                <i class="fr iconfont icon-gengduo gray"></i>
+              </li>
+              <li class="resource">
+                <span>资产明细(D)</span>
+                <span class="fr mr30 gray"></span>
+                <i class="fr iconfont icon-gengduo gray"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="formlist selected spuSelected">
+            <ul>
+              <li>
+                <em class="round">#</em>
+                <span>笔记本电脑</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>打印机</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>证书</span>
+              </li>
+            </ul>
+          </div>
+          <div class="formlist selected skuSelected">
+            <ul>
+              <li>
+                <em class="round">#</em>
+                <span>ThinkPad</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>Mac</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>戴尔</span>
+              </li>
+            </ul>
+          </div>
+          <div class="formlist selected resourceSelected">
+            <ul>
+              <li>
+                <em class="round">#</em>
+                <span>E460 4G</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>2015 Retian</span>
+              </li>
+              <li>
+                <em class="round">#</em>
+                <span>T410 12G</span>
+              </li>
+            </ul>
+          </div>
+        </form>
+
+        <form action="">
+          <div class="com-title">使用信息</div>
+          <div class="formlist">
+            <ul>
+              <li>
+                <span>清理人</span>
+                <input type="text" placeholder="请输入" />
+                <i class="iconfont icon-bianji gray"></i>
+              </li>
+              <li>
+                <span>备注</span>
+                <input type="text" placeholder="请输入" />
+                <i class="iconfont icon-bianji gray"></i>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+      <!-- 底部 -->
+      <div class="add-footer">
+        <a class="com-btn add-category">提交申请</a>
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/baofei.js"></script>
+    <script type="text/javascript" src="./js/conf.js"></script>
+    <script type="text/javascript" src="./js/user.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".selectThis .spu").click(function(){
+                $(".formlist.spuSelected").animate({
+                    left:0
+                },500);
+            });
+            $(".selectThis .sku").click(function(){
+                $(".formlist.skuSelected").animate({
+                    left:0
+                },500);
+            });
+            $(".selectThis .resource").click(function(){
+                $(".formlist.resourceSelected").animate({
+                    left:0
+                },500);
+            });
+            $(".add-category").click(function(){
+                if(!USER.hasLogin()){
+                    window.location.href=window.ITM.jumpDomain+"login.html";
+                    return;
+                }
+                var user = USER.getUser();
+
+                $.ajax({
+                    url: "http://47.103.65.135:8982/test1/testData/apply",
+                    type:"post",
+                    data:{
+                        "datenow":new Date(),
+                        "usercode":user.userCode,
+                        "resourceid":$("#checked_type").value(),
+                        "location":"",
+                        "recipientsmsg":"",
+                        "ApplyType":"55"
+                    },success:function(e){
+                        window.location.href= window.ITM.jumpDomain+"chuzhiall.html";
+                    }
+                })
+            });
+
+        })
+    </script>
+  </body>
+</html>
