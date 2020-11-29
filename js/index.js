@@ -1,9 +1,15 @@
-var domWidth = document.documentElement.clientWidth
-if (domWidth > 1000) {
-	var point_Width = 30
-} else {
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 	var point_Width = 10
+} else {
+	var point_Width = 30
 }
+// var domWidth = document.documentElement.clientWidth
+// if (domWidth > 1000) {
+// 	var point_Width = 30
+// } else {
+// 	var point_Width = 10
+// }
+
 var chart = Highcharts.chart('money-chart', {
 	chart: {
 		type: 'column'
@@ -63,7 +69,7 @@ var chart = Highcharts.chart('money-chart', {
 				[1, '#E84769']
 			]
 		},
-		pointWidth:30
+		pointWidth:point_Width
 	}],
 	responsive: {
 		rules: [{
