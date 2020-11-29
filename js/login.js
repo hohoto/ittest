@@ -23,6 +23,7 @@ var LOGIN = {
                         companyname:"测试公司",
                         rolename:"测试角色"
                     };
+                    USER.setUser(e);
                     window.location.href = window.ITM.jumpDomain + "index.html";
                 }
             },error:function(){
