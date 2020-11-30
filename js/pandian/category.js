@@ -4,7 +4,7 @@ let pandianlist
 let getPandianList = () => {
         console.log("开始获取盘点单")
         $.ajax({
-            url: "http://47.103.65.135:8982/pandian/getpandian",
+            url: "http://47.103.65.135/pandian/getpandian",
             type: "get",
             dataType: "json",
             success: function (text) {

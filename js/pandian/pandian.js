@@ -23,7 +23,7 @@ let bindevent = () => {
     $('#createpandian').on('click', () => { 
         let data = getData()
         $.ajax({
-            url: "http://47.103.65.135:8982/pandian/addpandian",
+            url: "http://47.103.65.135/pandian/addpandian",
             contentType: "application/json;charset=UTF-8",
             data: data,
             type: "post",
