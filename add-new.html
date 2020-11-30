@@ -6,10 +6,14 @@
     <title>2020It-Game</title>
     <link rel="stylesheet" href="./fonts/iconfont.css" />
     <link rel="stylesheet" href="./css/index.css" />
+	<link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/add-new.css" />
+	<script type="text/javascript" src="./js/baofei.js"></script>
+	<script type="text/javascript" src="./js/conf.js"></script>
+	<script type="text/javascript" src="./js/user.js"></script>
     <script src="./flexible/flexible.js"></script>
     <script src="./fonts/iconfont.js"></script>
-    <script src="./js/jquery.min.js"></script>
+	<script src="./js/jquery.min.js"></script>
   </head>
 
   <body>
@@ -23,17 +27,9 @@
           </a>
         </div>
       </div>
-     <!-- <div class="photo">
-        <span>资产照片</span>
-        <i class="iconfont  icon-gengduo ml10 gray fr font16"></i>
-        <div class="photo-img fr">
-          <i class="iconfont icon-xiangji"></i>
-        </div>
-      </div>-->
       <div class="com-title">资产概况</div>
       <div class="from-info">
-        <form method="post" id="data" enctype="application/x-www-form-urlencoded">
-          <div class="formlist">
+          <div class="formlist selectThis">
             <ul>
               <li>
                 <div class="photo">
@@ -41,144 +37,153 @@
                   <i class="iconfont  icon-gengduo ml10 gray fr font16"></i>
                   <div class="photo-img fr">
                     <i class="iconfont icon-xiangji"></i>
-                    <input type="file"  name="img" class="file-input">
-                  </div>
+					<input type="file" accept="image/*" capture="camera" id="picture" class="file-input" >
+                    </div>
                 </div>
               </li>
 
-              <li>
-                <span>资产分类</span>
-                <em class="red">*</em>
-                <input type="text" placeholder="电子分类" name="spuCode" />
-                <i class="iconfont icon-gengduo gray"></i>
-              </li>
+			<li class="spu">
+			  <span>资产分类</span>
+			  <em class="red">*</em>
+			  <select id = "resourceCode" class="fr" style="border: 0;display: block;">
+			    <option value ="20">电子产品</option>
+			    <option value ="21">非电子产品</option>
+			  </select>
+			  <span type="text" placeholder="电子分类" name="resourceCode" id="resourceCode"/>
+			</li>
               <li>
                 <span>资产名称</span>
                 <em class="red">*</em>
-                <input type="text" placeholder="电脑" name="resourceName"/>
+                <input type="text" placeholder="电脑" name="resourceName" id="resourceName"/>
                 <i class="iconfont icon-bianji gray"></i>
-              </li>
+              </li>			  
+			  <li class="sku">
+			    <span>品牌</span>
+			    <em class="red">*</em>
+			    <select id ="skuid" class="fr" style="border: 0;display: block;">
+			      <option value ="30">苹果</option>
+			      <option value ="31">联想</option>
+			      <option value ="32">小米</option>
+			    </select>
+			  </li>
               <li>
                 <span>入账日期</span>
                 <em class="red">*</em>
-                <input type="text" placeholder="2020-01-11" name="inaccountDate"/>
+                <input type="text" placeholder="2020-01-11" name="inaccountDate" id="inaccountDate"/>
                 <i class="iconfont icon-bianji gray"></i>
               </li>
               <li>
                 <span>账面原值</span>
                 <em class="red">*</em>
-                <input type="text" placeholder="200" name="oriValue"/>
+                <input type="text" placeholder="200" name="oriValue" id="oriValue"/>
                 <i class="iconfont icon-bianji gray"></i>
               </li>
               <li>
                 <span>净值</span>
                 <em class="red">*</em>
-                <input type="text" placeholder="200" name="netValue"/>
+                <input type="text" placeholder="200" name="netValue" id="netValue"/>
                 <i class="iconfont icon-bianji gray"></i>
               </li>
               <li>
               <li>
                 <span>计提折旧标记</span>
                 <em class="red">*</em>
-                <input type="text" placeholder="5555" name="accrualofdePreciation"/>
+                <input type="text"name="accrualofdePreciation" id="accrualofdePreciation"/>
                 <i class="iconfont icon-bianji gray"></i>
               </li>
               <li>
                 <span>剩余年限</span>
                 <em class="red">*</em>
-                <input type="text" placeholder="3" name="limitYear"/>
+                <input type="text"name="limitYear" id="limitYear"/>
                 <i class="iconfont icon-bianji gray"></i>
               </li>
               <li>
                 <span>保管人姓名</span>
                 <em class="red">*</em>
-                <input type="text" placeholder="杨天真" name="keeperName"/>
+                <input type="text"name="keeperName" id="keeperName"/>
                 <i class="iconfont icon-bianji gray"></i>
               </li>
               <li>
               <li>
                 <span>规格型号</span>
                 <em class="red">*</em>
-                <input type="text" placeholder="联想ThinkPad" name="spec" />
+                <input type="text" placeholder="联想ThinkPad" name="spec" id="spec" />
                 <i class="iconfont icon-bianji gray"></i>
               </li>
               <li>
                 <span>存放地</span>
                 <em class="red">*</em>
-                <input type="text" placeholder="欧冶仓库" name="liocation"/>
+                <input type="text" placeholder="欧冶仓库" name="liocation" id="liocation"/>
                 <i class="iconfont icon-gengduo gray"></i>
               </li>
               <li>
                 <span>盘点情况</span>
-                <em class="red">*</em>
-                <input type="text" placeholder="欧冶责任中心" name="pandianSit"/>
-                <i class="iconfont icon-bianji gray"></i>
-              </li>
-
-            </ul>
-          </div>
-          <div class="com-title">使用信息</div>
-          <div class="formlist">
-            <ul>
-              <li>
-                <span>使用部门</span>
-                <input type="text" placeholder="技术中心工程部"  />
-                <i class="iconfont icon-gengduo gray"></i>
-              </li>
-              <li>
-                <span>使用人员</span>
-                <input type="text" placeholder="技术人员" />
-                <i class="iconfont icon-gengduo gray"></i>
-              </li>
-              <li>
-                <span>存放地点</span>
-                <input type="text" placeholder="办公大厅"  />
-                <i class="iconfont icon-bianji gray"></i>
+                <span type="text" value="01" name="pandianSit" id="pandianSit" class="fr" style="margin-right: 17px;"/>待盘
               </li>
             </ul>
           </div>
-          <div class="com-title">其他信息</div>
-          <div class="formlist">
-            <ul>
-              <li>
-                <span>供应商</span>
-                <input type="text" placeholder="联想制造商"  />
-                <i class="iconfont icon-bianji gray"></i>
-              </li>
-              <li>
-                <span>保修周期</span>
-                <input type="text" placeholder="12个月" name="12个月"/>
-                <i class="iconfont icon-bianji gray"></i>
-              </li>
-            </ul>
-          </div>
-        </form>
       </div>
-
       <!-- 底部 -->
       <div class="add-footer bg-blue">
-        <a  class="com-btn add-save" id="save">保存</a>
+        <a  class="com-btn add-save" id="save" onclick="picture()">保存</a>
       </div>
     </div>
-    <script>
-      $("#save").click(function(){
-        var data = $("#data").serialize();
-        alert(data);
-        $.ajax({
-          url:"http://127.0.0.1:8982/itmatch/inStorage/inStorage",
-          type:"post",
-          data:JSON.stringify(data),
-          dataType: "json",
-          contentType: "application/json; charset=utf-8",
-          sucess:function(data){
-            alert(data);
-            alert("添加成功!");
-          },
-          error:function(){
-            alert("请求出错！");
-          }
-        })
-      })
-    </script>
+	<script type="text/javascript">
+		  var file;
+		  var imginput = document.getElementById("picture");
+		  imginput.onchange = function () {
+		  	    file = this.files;
+		  }
+		  
+		  function picture(){
+			var form = new FormData();
+			var resourceCode = $("#resourceCode option:selected").val();
+			var resourceName = $("#resourceName").val();
+			var skuId = $("#skuid option:selected").val();
+			var inaccountDate = new Date($("#inaccountDate").val());
+			var oriValue = $("#oriValue").val();
+			var netValue = $("#netValue").val();
+			var accrualofdePreciation = $("#accrualofdePreciation").val();
+			var limitYear = $("#limitYear").val();
+			var keeperName = $("#keeperName").val();
+			var spec = $("#spec").val();
+			var liocation = $("#liocation").val();
+			var pandianSit = "01"
+			var status = 10;
+			var spuId = resourceCode;
+			var img = file[0];
+			form.append("resourceCode",resourceCode);
+			form.append("resourceName",resourceName);
+			form.append("skuId",skuId);
+			form.append("inaccountDate",inaccountDate);
+			form.append("oriValue",oriValue);
+			form.append("netValue",netValue);
+			form.append("accrualofdePreciation",accrualofdePreciation);
+			form.append("limitYear",limitYear);
+			form.append("keeperName",keeperName);
+			form.append("spec",spec);
+			form.append("liocation",liocation);
+			form.append("pandianSit",pandianSit);
+			form.append("status",status);
+			form.append("spuId",spuId);
+		  	$.ajax({
+		  		url: "http://localhost:8982/itmatch/inStorage/inStorage",
+		  		type: "post",
+		  		data: form,
+				processData: false,//不去处理发送的数据
+				contentType: false,//不去设置Content-Type请求头
+		  		success: function(date){
+		  			if(date == 1){
+		  				alert("新增成功");
+		  			}else{
+		  				alert("新增失败")
+		  			}
+		  		},
+		  		error: function (date) {
+		  			alert("网络连接失败");
+		  		}
+		  	});
+		  }
+	</script>
   </body>
 </html>
