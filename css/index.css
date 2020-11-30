@@ -245,6 +245,11 @@ img {
     width: 100%!important;
   }
 }
+@media screen and (min-width: 900px) {
+  .chart .money .all-btn {
+    right: 0.13333333rem !important;
+  }
+}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (orientation: landscape) {
   .it-footer ul,
   .all-footer ul,
@@ -304,9 +309,10 @@ img {
   bottom: 0.4rem;
 }
 .chart .money {
-  margin: 0.53333333rem 0.4rem 0 0.4rem;
+  margin: 0.53333333rem 0 0 0.4rem;
   height: 0.8rem;
   font-size: 0.45333333rem;
+  position: relative;
 }
 .chart .money .money-txt {
   color: #040a15;
@@ -321,6 +327,11 @@ img {
 .chart .money .money-number {
   color: #60656e;
   font-size: 0.32rem;
+}
+.chart .money .all-btn {
+  position: absolute;
+  right: 0.53333333rem;
+  top: 0.05333333rem;
 }
 .chart .chart_pos {
   position: absolute;
