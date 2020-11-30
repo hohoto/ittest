@@ -237,6 +237,7 @@ img {
   padding: 0 0.8rem;
   left: 3.2rem;
   top: 0.18666667rem;
+  box-sizing: border-box;
 }
 .all-head .icon-sousuo {
   position: absolute;
