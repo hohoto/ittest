@@ -2,9 +2,9 @@ approval();
 
 function approval() {
 	var AllList;
-	var strhtml;
+	var strhtml ='';
 	$.ajax({ //jQuery方法，此处可以换成其它请求方式
-		url: "http://localhost:8982/search/getAllList",
+		url: "http://47.103.65.135:8982/search/getAllList",
 		type: "get",
 		processData: false, //不去处理发送的数据
 		contentType: false, //不去设置Content-Type请求头
@@ -21,9 +21,9 @@ function approval() {
 					var responsibilityCenter = AllList[i].responsibilityCenter;
 
 					
-					strhtml += '<div class="mt15 assets-list" style="height: 6.333333rem;">';
+					strhtml += '<div class="mt15 assets-list" style="height: 6.333333rem;width: auto;">';
 					strhtml += '<div class="assets-img">';
-					strhtml += '<img src="./images/1.png+" alt="" />';
+					strhtml += '<img src="./images/computer.jpg" alt="" />';
 					strhtml += '<div class="tag">闲置</div>';
 					strhtml += '</div>';
 					strhtml += '<div class="info">';
@@ -56,7 +56,7 @@ function approval() {
 				
 				alert(data);
 				$.ajax({
-					url:"http://localhost:8982/user/apply",
+					url:"http://47.103.65.135:8982/user/apply",
 					type:"get",
 					data:JSON.stringify(data),
 					dataType:"json",

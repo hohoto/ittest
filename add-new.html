@@ -69,7 +69,8 @@
               <li>
                 <span>入账日期</span>
                 <em class="red">*</em>
-                <input type="text" placeholder="2020-01-11" name="inaccountDate" id="inaccountDate"/>
+                <input type="text" name="inaccountDate" id="inaccountDate" />
+				
                 <i class="iconfont icon-bianji gray"></i>
               </li>
               <li>
@@ -129,6 +130,8 @@
       </div>
     </div>
 	<script type="text/javascript">
+		var myDate = new Date();
+		$("#inaccountDate").val(myDate.toLocaleString().substring(0,11));
 		  var file;
 		  var imginput = document.getElementById("picture");
 		  imginput.onchange = function () {
