@@ -84,23 +84,9 @@
 				left: 50%;
     			transform: translateX(-50%);
 			}
-			.log-con .login_infor input {
-				display: block;
-				width: 300px;
-				height: 42px;
-				background-color: #ffffff;
-				border-radius: 4px;
-				opacity: 0.9;
-				border: 0;
-				font-size: 16px;
-				outline: none;
-				padding-left: 40px;
-				color: #000000;
-				text-align: left;
-				margin: 10px auto 30px;
-			}
+			
 			.log-con a.btn-login,.log-con a.btn-login:visited {
-				width: 340px;
+				width: 100%;
 				height: 44px;
 				background-color: #0090ff;
 				border-radius: 4px;
@@ -110,14 +96,13 @@
 				line-height: 44px;
 				cursor: pointer;
 				opacity: 1;
-
 				background-image: linear-gradient(135deg, #ABDCFF 0%, #0396FF 100%);
 				box-shadow: 0 20px 30px -6px rgba(30, 161, 255, 0.5);
 				outline: none;
 				border: none;
 				cursor: pointer;
-				/* font-size: 24px; */
-				/* color: white; */
+				font-size: 20px;
+				color: white;
 			}
 			.log-con>a:hover{
 				/* -webkit-transform: translatey(10px);
@@ -129,22 +114,53 @@
 				font-size: 16px;
 			}
 			.log-con .login_infor{
-				width: 340px;
-				margin: 0 auto;
+				/* width: 340px; */
+				margin: 0 10%;
 			}
+			.log-con .login_infor .icon_bg{
+				display: inline-block;
+				background-color: #0090ff;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 38px;
+				height: 42px;
+				z-index: 1000;
+			}
+			.log-con .login_infor input {
+				display: block;
+				width: 100%;
+				height: 42px;
+				background-color: #ffffff;
+				border-radius: 4px;
+				opacity: 0.9;
+				border: 0;
+				font-size: 16px;
+				outline: none;
+				padding-left: 45px;
+				color: #000000;
+				text-align: left;
+				margin: 10px auto 30px;
+				box-sizing: border-box;
+			}
+			input::-webkit-input-placeholder { /* WebKit browsers */
+				color: #999;
+				}
 			.log-con .login_infor .code {
 				float: left;
-				width: 228px;
+				width: 64%;
 				display: inline-block;
 				padding: 0;
 				text-align: center;
 			}
 			.log-con #code {
-				float: left;
+				float: right;
 				width: 94px;
 				display: inline-block;
-				margin-left: 14px;
+				/* margin-left: 14px; */
 				cursor: pointer;
+				padding-left: 0;
+    			text-align: center;
 			}
 			/*logo*/
 			.logo {
@@ -164,10 +180,10 @@
 			}
 			.icon-username,.icon-password{
 				position: absolute;
-				left: 10px;
+				left: 6px;
 				top: 7px;
 				z-index: 1000;
-				color: #2199f3;
+				color: #fff;
 				font-size: 25px;
 			}
 		</style>
@@ -184,11 +200,11 @@
 					<!-- <a>立即登录</a> -->
 			<ul class="login_infor">
 				<li class="">
-					<i class="icon iconfont icon-username"></i>
+					<em class="icon_bg"><i class="icon iconfont icon-username"></i></em>
 					<input type="text" class="name" name="userCode" placeholder="请输入用户名"/>
 				</li>
 				<li>
-					<i class="icon iconfont icon-password"></i>
+					<em class="icon_bg"><i class="icon iconfont icon-password"></i></em>
 					<input type="text" class="password" name="password" placeholder="请输入密码"/>
 				</li>
 				<li class="clearfix">
