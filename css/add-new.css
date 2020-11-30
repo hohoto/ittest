@@ -312,6 +312,8 @@ img {
 }
 .add-footer {
   width: 10rem;
+  max-width: 20rem;
+  min-width: 8.53333333rem;
   height: 1.97333333rem;
   position: fixed;
   text-align: center;

@@ -130,6 +130,10 @@
     ul{
       li{
         width: 33%;
+        .gongneng-coming{
+          margin-top:10rem/@b;
+          color:#999;
+        }
       }
     }
   }
@@ -145,6 +149,9 @@
       text-align: center;
       a {
         display: block;
+      }
+      &:hover a{
+        color:#5855fe;
       }
     }
   }
@@ -181,7 +188,7 @@
         color: #abb0bd;
         display: block;
       }
-      &.active {
+      &.active,&:hover {
         a {
           color: #5855fe;
         }
@@ -241,7 +248,8 @@
 }
 .com-btn {
   display: inline-block;
-  width: 345rem / @b;
+  // width: 345rem / @b;
+  width:100%;
   height: 44rem / @b;
   line-height: 44rem / @b;
   text-align: center;
