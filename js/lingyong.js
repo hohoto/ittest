@@ -20,7 +20,7 @@ function approval() {
 					var keeperName = AllList[i].keeperName;
 					var responsibilityCenter = AllList[i].responsibilityCenter;
 
-					strhtml += '<div class="mt15 assets-list">';
+					strhtml += '<div class="mt15 assets-list" style="height: 6.333333rem;">';
 					strhtml += '<div class="assets-img">';
 					strhtml += '<img src="./images/1.png+" alt="" />';
 					strhtml += '<div class="tag">闲置</div>';
@@ -43,6 +43,7 @@ function approval() {
 					strhtml += '</div>'
 					strhtml += '<div class="mt10 bor-t">'
 					strhtml += '<div class="mt10 fr">'
+					strhtml += '<a class="it-btn" id="insert" style="text-align: center;">确认选择</a>'
 					strhtml += '</div>'
 					strhtml += '</div>'
 					strhtml += '</div>'
