@@ -44,7 +44,7 @@ function approval() {
 					strhtml += '</div>'
 					strhtml += '<div class="mt10 bor-t">'
 					strhtml += '<div class="mt10 fr">'
-					strhtml += '<a class="it-btn" id="add" style="text-align: center;">确认选择</a>'
+					strhtml += '<a class="it-btn" id="add" style="text-align: center;" resourceId="'+resourceId+'" resourceCode="'+resourceCode+'">确认选择</a>'
 					strhtml += '</div>'
 					strhtml += '</div>'
 					strhtml += '</div>'
@@ -52,23 +52,26 @@ function approval() {
 			}
 			$("#jie").html(strhtml);
 			$("#add").click(function() {
-				var data = $("form").serialize();
+				var resourceIds = this.getAttribute("resourceId");
+				var resourcecCodes = this.getAttribute("resourceCode");
+				var ser = $("form").serialize();
+				ser += "&resourceid=" + resourceId;
 				
-				alert(data);
-				$.ajax({
-					url:"http://47.103.65.135:8982/user/apply",
-					type:"get",
-					data:JSON.stringify(data),
-					dataType:"json",
-					contentType: "application/json; charset=utf-8",
-					sucess:function(data){
-					  alert(data);
-					  alert("添加成功!");
-					},
-					error:function(){
-					  alert("请求出错！");
+				var nowDate = new Date();
+								var day = nowDate.getDate();
+				                var month = nowDate.getMonth() + 1;//注意月份需要+1
+				                var year = nowDate.getFullYear()
+				                var date1 = year + '-' + month + '-' + day;
+				
+				ser += "&datenow1=" + date1;
+				ser += "&ApplyType=" + "31";
+				$.get("http://47.103.65.135:8982/user/apply", ser, function(rel) {
+					if (rel.result > 0) {
+						alert("新增成功");
+					} else {
+						alert("新增失败");
 					}
-				})
+				}, "json")
 			});
 		}
 	});

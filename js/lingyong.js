@@ -26,7 +26,7 @@ function approval() {
 					strhtml += '<div class="tag">闲置</div>';
 					strhtml += '</div>';
 					strhtml += '<div class="info">';
-					strhtml += '<div class="mt5 font13">' + resourceId + '</div>';
+					strhtml += '<div class="mt5 font13" >' + resourceId + '</div>';
 					strhtml += '<div class="mt5 font13 gray">' + resourceName + ' | ' + resourceCode + '</div>';
 					strhtml += '</div>'
 					strhtml += '<div class="mt15">'
@@ -43,7 +43,7 @@ function approval() {
 					strhtml += '</div>'
 					strhtml += '<div class="mt10 bor-t">'
 					strhtml += '<div class="mt10 fr">'
-					strhtml += '<a class="it-btn" id="insert" style="text-align: center;">确认选择</a>'
+					strhtml += '<a class="it-btn" id="insert" style="text-align: center;" resourceId="'+resourceId+'" resourceCode="'+resourceCode+'">确认选择</a>'
 					strhtml += '</div>'
 					strhtml += '</div>'
 					strhtml += '</div>'
@@ -51,9 +51,21 @@ function approval() {
 			}
 			$("#ling").html(strhtml);
 			$("#insert").click(function() {
+				var resourceIds = this.getAttribute("resourceId");
+				var resourcecCodes = this.getAttribute("resourceCode");
 				var ser = $("form").serialize();
-				$.get("http://47.103.65.135:8982/itmatch/lingyong/apply", ser, function(rel) {
-					if (rel > 0) {
+				ser += "&resourceid=" + resourceId;
+				
+				var nowDate = new Date();
+								var day = nowDate.getDate();
+				                var month = nowDate.getMonth() + 1;//注意月份需要+1
+				                var year = nowDate.getFullYear()
+				                var date1 = year + '-' + month + '-' + day;
+
+				ser += "&datenow1=" + date1;
+				ser += "&ApplyType=" + "32";
+				$.get("http://47.103.65.135:8982/user/apply", ser, function(rel) {
+					if (rel.result > 0) {
 						alert("新增成功");
 					} else {
 						alert("新增失败");
