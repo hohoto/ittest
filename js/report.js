@@ -91,7 +91,12 @@ var REPORT = {
       plotOptions: {
         pie: {
           innerSize: 100,
-          depth: 45,
+					depth: 45,
+					dataLabels: {
+						style: {
+							"fontSize": "14px"
+						}
+					}
         },
       },
       series: [

@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="./fonts/iconfont.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="css/add-new.css" />
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/jieyong.js"></script>
     <script src="./flexible/flexible.js"></script>
     <script src="./fonts/iconfont.js"></script>
+	
   </head>
 
   <body>
-    <div class="contaoner">
+    <div class="contaoner" id="data">
       <!-- 头部 -->
       <div class="add-head">
         <div class="go-history clearfix">
@@ -34,31 +37,37 @@
             <ul>
               <li>
                 <em class="round">#</em>
-                <span>选项</span>
-                <i class="fr iconfont icon-gengduo gray"></i>
-                <div class="fr mr30 gray">12341234123</div>
+                <span>借用人员</span>
+				<em class="red">*</em>
+                <input type="text" placeholder="请输入" name="usercode"/>
+                <i class="iconfont icon-bianji gray"></i>
               </li>
               <li>
                 <em class="round">#</em>
-                <span>选项选项选项选项</span>
-                <i class="fr iconfont icon-gengduo gray"></i>
-                <div class="fr mr30 gray">12341234123</div>
+                <span>使用地点</span>
+                <input type="text" placeholder="请输入" name="东鼎国际3楼"/>
+                <i class="iconfont icon-bianji gray"></i>
               </li>
               <li>
                 <em class="round">#</em>
-                <span>选项</span>
-                <i class="fr iconfont icon-gengduo gray"></i>
-                <div class="fr mr30 gray">12341234123</div>
+                <span>用途</span>
+               <input type="text" placeholder="请输入" name="recipientsmsg"/>
+               <i class="iconfont icon-bianji gray"></i>
               </li>
             </ul>
           </div>
         </form>
       </div>
+	  <div class="com-title" id="jie">使用信息</div>
+	  
       <!-- 底部 -->
       <div class="add-footer">
         <a href="" class="com-btn edit">编辑部门</a>
-        <a href="" class="com-btn add-user">新增员工</a>
+        <a href="" class="com-btn add-user" id="add">新增员工</a>
       </div>
     </div>
   </body>
+  
+  	  
+  </script>
 </html>
