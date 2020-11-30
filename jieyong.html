@@ -6,7 +6,8 @@
     <title>2020It-Game</title>
     <link rel="stylesheet" href="./fonts/iconfont.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="css/add-new.css" />
+    <link rel="stylesheet" href="css/all.css" />
+	<link rel="stylesheet" href="css/add-new.css"/>
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/jieyong.js"></script>
     <script src="./flexible/flexible.js"></script>
@@ -31,39 +32,44 @@
         <i class="iconfont icon-sousuo"></i>
       </div>
       <div class="com-title">财务部</div>
-      <div class="from-info">
-        <form action="">
-          <div class="formlist">
-            <ul>
-              <li>
-                <em class="round">#</em>
-                <span>借用人员</span>
-				<em class="red">*</em>
-                <input type="text" placeholder="请输入" name="usercode"/>
-                <i class="iconfont icon-bianji gray"></i>
-              </li>
-              <li>
-                <em class="round">#</em>
-                <span>使用地点</span>
-                <input type="text" placeholder="请输入" name="东鼎国际3楼"/>
-                <i class="iconfont icon-bianji gray"></i>
-              </li>
-              <li>
-                <em class="round">#</em>
-                <span>用途</span>
-               <input type="text" placeholder="请输入" name="recipientsmsg"/>
-               <i class="iconfont icon-bianji gray"></i>
-              </li>
-            </ul>
-          </div>
-        </form>
-      </div>
-	  <div class="com-title" id="jie">使用信息</div>
+		  <div>
+			<form action="">
+			  <div class="formlist">
+				<ul>
+				  <li>
+					<em class="round">#</em>
+					<span>借用人员</span>
+					<em class="red">*</em>
+					<input type="text" placeholder="请输入" name="usercode"/>
+					<i class="iconfont icon-bianji gray"></i>
+				  </li>
+				  <li>
+					<em class="round">#</em>
+					<span>使用地点</span>
+					<input type="text" placeholder="请输入" name="location"/>
+					<i class="iconfont icon-bianji gray"></i>
+				  </li>
+				  <li>
+					<em class="round">#</em>
+					<span>用途</span>
+				   <input type="text" placeholder="请输入" name="recipientsmsg"/>
+				   <i class="iconfont icon-bianji gray"></i>
+				   <input type="hidden"  name="ApplyType" value="31" id="msg"/>
+				  </li>
+				</ul>
+			  </div>
+			</form>
+		  </div>
+		  <div class="com-title" >使用信息</div>
+		  <div class="all-list" id="jie">
+		          <!-- 列表 -->
+		  </div>
+	  
 	  
       <!-- 底部 -->
       <div class="add-footer">
         <a href="" class="com-btn edit">编辑部门</a>
-        <a href="" class="com-btn add-user" id="add">新增员工</a>
+        <a href="" class="com-btn add-user" id="add">申请借用</a>
       </div>
     </div>
   </body>

@@ -20,7 +20,8 @@ function approval() {
 					var keeperName = AllList[i].keeperName;
 					var responsibilityCenter = AllList[i].responsibilityCenter;
 
-					strhtml += '<div class="mt15 assets-list">';
+					
+					strhtml += '<div class="mt15 assets-list" style="height: 6.333333rem;">';
 					strhtml += '<div class="assets-img">';
 					strhtml += '<img src="./images/1.png+" alt="" />';
 					strhtml += '<div class="tag">闲置</div>';
@@ -43,6 +44,7 @@ function approval() {
 					strhtml += '</div>'
 					strhtml += '<div class="mt10 bor-t">'
 					strhtml += '<div class="mt10 fr">'
+					strhtml += '<a class="it-btn" id="add" style="text-align: center;">确认选择</a>'
 					strhtml += '</div>'
 					strhtml += '</div>'
 					strhtml += '</div>'
@@ -50,15 +52,23 @@ function approval() {
 			}
 			$("#jie").html(strhtml);
 			$("#add").click(function() {
-				var ser = $("form").serialize();
-				alert(ser);
-				$.get("http://47.103.65.135:8982/itmatch/jieyong/apply", ser, function(rel) {
-					if (rel > 0) {
-						alert("新增成功");
-					} else {
-						alert("新增失败");
+				var data = $("form").serialize();
+				
+				alert(data);
+				$.ajax({
+					url:"http://localhost:8982/user/apply",
+					type:"get",
+					data:JSON.stringify(data),
+					dataType:"json",
+					contentType: "application/json; charset=utf-8",
+					sucess:function(data){
+					  alert(data);
+					  alert("添加成功!");
+					},
+					error:function(){
+					  alert("请求出错！");
 					}
-				}, "json")
+				})
 			});
 		}
 	});
