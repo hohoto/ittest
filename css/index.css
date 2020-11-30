@@ -229,6 +229,7 @@ img {
   .all-footer,
   .add-footer {
     width: 840px!important;
+    left: initial!important;
   }
   .all-head {
     width: auto!important;
@@ -245,10 +246,14 @@ img {
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (orientation: landscape) {
-  .it-footer,
-  .all-footer,
-  .add-footer {
+  .it-footer ul,
+  .all-footer ul,
+  .add-footer ul {
+    width: 100%!important;
+    height: 100%;
+    left: 0!important;
     position: fixed!important;
+    background-color: #ffffff;
   }
 }
 .it-header {
