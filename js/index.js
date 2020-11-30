@@ -113,7 +113,7 @@ var INDEX = {
       // backgroundColor: '#fff',
       grid: {
         left: '0%',
-        right: '2%',
+        right: '8%',
         bottom: '2%',
         top: '2%',
         containLabel: true,
