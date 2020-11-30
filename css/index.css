@@ -177,11 +177,12 @@ img {
   display: inline-block;
   width: 2.21333333rem;
   height: 0.74666667rem;
+  line-height: 0.74666667rem;
   border-radius: 0.37333333rem;
   border: 0.02666667rem solid #abb0bd;
   font-size: 0.32rem;
   color: #60656e;
-  padding: 0.13333333rem 0.4rem;
+  text-align: center;
 }
 .it-btn.blue {
   color: #5855fe;
@@ -215,6 +216,7 @@ img {
   min-width: 8.53333333rem;
   margin: 0 auto;
   background-color: #f3f5f9;
+  overflow: hidden;
 }
 @media screen and (min-width: 900px) {
   .contaoner {
@@ -268,6 +270,12 @@ img {
   background-size: 100%;
   position: relative;
 }
+.it-header .ouyeel-logo {
+  position: absolute;
+  top: 0.53333333rem;
+  right: 0.53333333rem;
+  max-width: 2rem;
+}
 .it-header .who {
   position: absolute;
   top: 1.76rem;
@@ -294,6 +302,8 @@ img {
   text-align: center;
   margin-left: 0.13333333rem;
   vertical-align: middle;
+  max-width: 10rem;
+  overflow: hidden;
 }
 .it-header .company {
   font-size: 0.4rem;
