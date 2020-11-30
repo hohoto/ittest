@@ -77,6 +77,9 @@
     }
     .report-num{
       line-height: 38rem/@b;
+      position: absolute;
+    right: 0;
+    top: 0;
     }
   }
 }
@@ -118,19 +121,28 @@
     border-bottom: 1rem/@b solid #eceef2;
   }
 }
+.report-percent{
+  width: 100%;
+  height: 100%;
+  line-height:40rem/@b ;
+}
+.report-txt{
+  display: inline-block;
+  width: 25%;
+}
 .percent-con{
-  width: 300px;
-  height: 10px;
-  border-radius: 6px;
+  display: inline-block;
+  width: 50%;
+  height: 10rem/@b;
+  border-radius: 6rem/@b;
   background-color: #f1f1f1;
   position: relative;
   text-align: right;
-  margin-top: 5px;
-  overflow: hidden;
+  margin-top: 5rem/@b;
 }
 .percent{
-  height: 10px;
-  border-radius: 6px;
+  height: 10rem/@b;
+  border-radius: 6rem/@b;
   background-color: #575af3;
   position: absolute;
   left: 0;
@@ -150,7 +162,8 @@ li:nth-child(5) .percent{
 }
 .perent-text{
   position: absolute;
-  right: 4px;
-  top: -4px;
-  font-size: 12px;
+  right: 4rem/@b;
+  top: -5rem/@b;
+  font-size: 12rem/@b;
+  line-height: 20rem/@b;
 }
