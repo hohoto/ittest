@@ -38,7 +38,7 @@
 						<ul>
 							<li>
 								<span>领用时间</span>
-								<span class="fr mr30 gray" name="">2020-11-27</span>
+								<input name="" type="text" id="date"></input>
 								<i class="fr iconfont icon-gengduo gray"></i>
 
 							</li>
@@ -65,6 +65,7 @@
 					<div class="all-list" id="ling">
 					        <!-- 列表 -->
 					</div>
+				</form>
 				
 			<!-- 底部 -->
 			<div class="add-footer">
@@ -74,6 +75,11 @@
 				
 			</div>
 		</div>
+		<script>
+			var myDate = new Date();
+			$("#date").val(myDate.toLocaleString().substring(0,11));
+		</script>
+		
 	</body>
 	
 </html>

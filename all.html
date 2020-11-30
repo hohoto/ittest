@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="./fonts/iconfont.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/add-new.css"/>
+    <script src="./js/jquery.min.js"></script>
     <script src="./flexible/flexible.js"></script>
     <script src="./fonts/iconfont.js"></script>
+	<script src="js/All.js"></script>
   </head>
 
   <body>
@@ -23,29 +26,23 @@
             <i class="iconfont icon-saoyisao font20"></i>
           </a>
         </div>
-        <input type="text" class="search" placeholder="暗提示">
+        <input type="text" class="search">
         <i class="iconfont icon-sousuo"></i>
       </div>
       <!-- 导航 -->
       <div class="all-nav">
         <ul class="all-navlist clearfix">
           <li class="current">
-            <a href="javascript:;"> 全部(99) </a>
+            <a href="javascript:;" id="showall"> 全部(99) </a>
           </li>
           <li>
-            <a href="javascript:;"> 闲置 </a>
+            <a href="javascript:;" id="showxz"> 闲置 </a>
           </li>
           <li>
-            <a href="javascript:;"> 在用 </a>
+            <a href="javascript:;" id="showzy"> 在用 </a>
           </li>
           <li>
-            <a href="javascript:;"> 借用 </a>
-          </li>
-          <li>
-            <a href="javascript:;"> 借用 </a>
-          </li>
-          <li>
-            <a href="javascript:;"> 借用 </a>
+            <a href="javascript:;" id="showjy"> 借用 </a>
           </li>
         </ul>
         <div class="fr all-filter">
@@ -76,94 +73,8 @@
         </div>
       </div>
       <!-- 内容 -->
-      <div class="all-list">
+      <div class="all-list" id="all">
         <!-- 列表 -->
-        <div class="mt15 assets-list">
-          <div>
-            <div class="assets-img">
-              <img src="./images/1.png" alt="" />
-              <div class="tag">在用</div>
-            </div>
-            <div class="info">
-              <div class="title">资产名称资产名称资产名称资产xxxxxxxx</div>
-              <div class="mt5 font13">PX1234567890</div>
-              <div class="mt5 font13 gray">张三 | 财务部 | 一般办公设备</div>
-            </div>
-          </div>
-          <div class="mt15">
-            <span class="gray">规格型号</span>
-            <span class="ml15 black">iPhone </span>
-          </div>
-          <div class="mt10">
-            <span class="gray">存放地点</span>
-            <span class="ml15 black place">一二三四五一二三四ssssssssssssssssssssssssss</span>
-          </div>
-          <div class="mt10 bor-t">
-            <div class="mt20 mr10 fr">
-              <a href="" class="it-btn">复制资产</a>
-              <a href="" class="it-btn ml10">处理记录</a>
-              <a href="" class="it-btn blue ml10">资产管理</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt15 assets-list">
-          <div>
-            <div class="assets-img">
-              <img src="./images/1.png" alt="" />
-              <div class="tag">在用</div>
-            </div>
-            <div class="info">
-              <div class="title">资产名称资产名称资产名称资产xxxxxxxx</div>
-              <div class="mt5 font13">PX1234567890</div>
-              <div class="mt5 font13 gray">张三 | 财务部 | 一般办公设备</div>
-            </div>
-          </div>
-          <div class="mt15">
-            <span class="gray">规格型号</span>
-            <span class="ml15 black">iPhone </span>
-          </div>
-          <div class="mt10">
-            <span class="gray">存放地点</span>
-            <span class="ml15 black place">一二三四五一二三四ssssssssssssssssssssssssss</span>
-          </div>
-          <div class="mt10 bor-t">
-            <div class="mt20 mr10 fr">
-              <a href="" class="it-btn">复制资产</a>
-              <a href="" class="it-btn ml10">处理记录</a>
-              <a href="" class="it-btn blue ml10">资产管理</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt15 assets-list">
-          <div>
-            <div class="assets-img">
-              <img src="./images/1.png" alt="" />
-              <div class="tag">在用</div>
-            </div>
-            <div class="info">
-              <div class="title">资产名称资产名称资产名称资产xxxxxxxx</div>
-              <div class="mt5 font13">PX1234567890</div>
-              <div class="mt5 font13 gray">张三 | 财务部 | 一般办公设备</div>
-            </div>
-          </div>
-          <div class="mt15">
-            <span class="gray">规格型号</span>
-            <span class="ml15 black">iPhone </span>
-          </div>
-          <div class="mt10">
-            <span class="gray">存放地点</span>
-            <span class="ml15 black place">一二三四五一二三四ssssssssssssssssssssssssss</span>
-          </div>
-          <div class="mt10 bor-t">
-            <div class="mt20 mr10 fr">
-              <a href="" class="it-btn">复制资产</a>
-              <a href="" class="it-btn ml10">处理记录</a>
-              <a href="" class="it-btn blue ml10">资产管理</a>
-            </div>
-          </div>
-        </div>
       </div>
       <!-- 底部 -->
       <div class="all-footer">
@@ -183,3 +94,4 @@
     </script>
   </body>
 </html>
+

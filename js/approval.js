@@ -2,11 +2,11 @@ approval();
 
 function approval(){
 	var approvalList;
-	var strhtml;
+	var strhtml = '';
 	var showStatus;
 	var showColor;
 	$.ajax({//jQuery方法，此处可以换成其它请求方式
-	    url: "http://localhost:8982/search/getApprovalList",
+	    url: "http://47.103.65.135:8982/search/getApprovalList",
 	    type: "get", 
 	    processData: false,//不去处理发送的数据
 		contentType: false,//不去设置Content-Type请求头
@@ -51,7 +51,7 @@ function approval(){
 					}
 					strhtml += '<div class="mt15 assets-list">';
 					strhtml += '<div class="assets-img">';
-					strhtml += '<img src="./images/1.png+" alt="" />';
+					strhtml += '<img src="./images/computer.jpg" alt="" />';
 					strhtml += showColor;
 					strhtml += '</div>';
 					strhtml += '<div class="info">';
@@ -80,7 +80,7 @@ function approval(){
 			$("#agree").click(function(){
 				var resourceId = $("#agree").attr("value");
 				$.ajax({
-					url: "http://localhost:8982/DoApproval/approvalController",
+					url: "http://47.103.65.135:8982/DoApproval/approvalController",
 					type: "post",
 					data: {
 						resourceId:resourceId,
@@ -102,7 +102,7 @@ function approval(){
 			$("#disagree").click(function(){
 				var resourceId = $("#disagree").attr("value");
 				$.ajax({
-					url: "http://localhost:8982/DoApproval/approvalController",
+					url: "http://47.103.65.135:8982/DoApproval/approvalController",
 					type: "post",
 					data: {
 						resourceId:resourceId,
