@@ -229,6 +229,7 @@ img {
   .all-footer,
   .add-footer {
     width: 840px!important;
+    left: initial!important;
   }
   .all-head {
     width: auto!important;
@@ -242,6 +243,22 @@ img {
   .add-head,
   .photo {
     width: 100%!important;
+  }
+}
+@media screen and (min-width: 900px) {
+  .chart .money .all-btn {
+    right: 0.13333333rem !important;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (orientation: landscape) {
+  .it-footer ul,
+  .all-footer ul,
+  .add-footer ul {
+    width: 100%!important;
+    height: 100%;
+    left: 0!important;
+    position: fixed!important;
+    background-color: #ffffff;
   }
 }
 .it-header {
@@ -292,9 +309,10 @@ img {
   bottom: 0.4rem;
 }
 .chart .money {
-  margin: 0.53333333rem 0.4rem 0 0.4rem;
+  margin: 0.53333333rem 0 0 0.4rem;
   height: 0.8rem;
   font-size: 0.45333333rem;
+  position: relative;
 }
 .chart .money .money-txt {
   color: #040a15;
@@ -309,6 +327,11 @@ img {
 .chart .money .money-number {
   color: #60656e;
   font-size: 0.32rem;
+}
+.chart .money .all-btn {
+  position: absolute;
+  right: 0.53333333rem;
+  top: 0.05333333rem;
 }
 .chart .chart_pos {
   position: absolute;
@@ -373,6 +396,7 @@ img {
   background-color: #ffffff;
   position: fixed;
   bottom: 0;
+  left: 0;
 }
 .it-footer ul li {
   width: 20%;

@@ -3,12 +3,6 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 } else {
   var point_Width = 20
 }
-// var domWidth = document.documentElement.clientWidth
-// if (domWidth > 1000) {
-// 	var point_Width = 30
-// } else {
-// 	var point_Width = 10
-// }
 
 var INDEX = {
   load: function () {
@@ -108,14 +102,14 @@ var INDEX = {
     // 			}
     // 		}]
     // 	}
-		// });
-		// { 在用: 18, 闲置: 20, 占用: 33, 维修: 16, 处置: 10 }
-    var salvProName = ['处置', '维修', '借用', '在用', '闲置']
+    // });
+    // { 在用: 18, 闲置: 20, 占用: 33, 维修: 16, 处置: 10 }
+    var salvProName = ['处置', '维修', '占用', '闲置', '在用']
     var salvProValue = [30, 26, 33, 18, 20]
-    var salvProMax = [100,100,100,100,100] //背景按最大值
- 
+    var salvProMax = [100, 100, 100, 100, 100] //背景按最大值
+
     var myChart = echarts.init(document.getElementById('money-chart'))
-    myChart.setOption({
+    var options = {
       // backgroundColor: '#fff',
       grid: {
         left: '0%',
@@ -128,18 +122,18 @@ var INDEX = {
         trigger: 'axis',
         axisPointer: {
           type: 'none',
-				},
-				backgroundColor: '#fff',
-				borderColor: "rgba(88, 85, 254, 1)",
-				borderWidth: 1,
-				padding: [10, 10],
-				position: function (point, params, dom, rect, size) {
-					// 固定在顶部
-					return [point[0], '30%'];
-			},
-				textStyle: {
-					color: "rgba(88, 85, 254, 1)"
-				},
+        },
+        backgroundColor: '#fff',
+        borderColor: 'rgba(88, 85, 254, 1)',
+        borderWidth: 1,
+        padding: [10, 10],
+        position: function (point, params, dom, rect, size) {
+          // 固定在顶部
+          return [point[0], '30%']
+        },
+        textStyle: {
+          color: 'rgba(88, 85, 254, 1)',
+        },
         formatter: function (params) {
           return params[0].name + ' : ' + params[0].value
         },
@@ -195,7 +189,7 @@ var INDEX = {
               color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
                 {
                   offset: 0,
-                  color: 'rgba(233, 78 ,154,1)',
+                  color: 'rgba(232, 78 ,154,1)',
                 },
                 {
                   offset: 1,
@@ -210,8 +204,8 @@ var INDEX = {
         {
           name: '背景',
           type: 'bar',
-          barWidth: point_Width -5,
-          barGap: '-90%',
+          barWidth: point_Width - 5,
+          barGap: '-88%',
           data: salvProMax,
           itemStyle: {
             normal: {
@@ -221,7 +215,12 @@ var INDEX = {
           },
         },
       ],
-    })
+    }
+    myChart.setOption(options)
+    // 页面改变，重新渲染
+    window.onresize = function () {
+      location.reload()
+    }
   },
   createMainChart: function () {
     var _this = this
