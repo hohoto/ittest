@@ -177,11 +177,12 @@ img {
   display: inline-block;
   width: 2.21333333rem;
   height: 0.74666667rem;
+  line-height: 0.74666667rem;
   border-radius: 0.37333333rem;
   border: 0.02666667rem solid #abb0bd;
   font-size: 0.32rem;
   color: #60656e;
-  padding: 0.13333333rem 0.4rem;
+  text-align: center;
 }
 .it-btn.blue {
   color: #5855fe;
@@ -237,6 +238,7 @@ img {
   padding: 0 0.8rem;
   left: 3.2rem;
   top: 0.18666667rem;
+  box-sizing: border-box;
 }
 .all-head .icon-sousuo {
   position: absolute;
