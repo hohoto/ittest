@@ -14,7 +14,7 @@ function approval(){
 			approvalList = date.approval;
 			if(approvalList.length != 0){
 				for(var i = 0;i<approvalList.length;i++){
-					var SPU_NAME = approvalList[i].SPU_NAME;
+					var SPU_NAME = approvalList[i].spu_NAME;
 					var resourceId = approvalList[i].resourceId;
 					var approvalName = approvalList[i].approvalName;
 					var approvalType = approvalList[i].approvalType;
@@ -55,7 +55,7 @@ function approval(){
 					strhtml += showColor;
 					strhtml += '</div>';
 					strhtml += '<div class="info">';
-					strhtml += '<div class="title">'+SPU_NAME+'</div>';
+					strhtml += '<div class="title">' + SPU_NAME + '</div>';
 					strhtml += '<div class="mt5 font13">' + resourceId + '</div>';
 					strhtml += '<div class="mt5 font13 gray">' + approvalName + ' | ' + department + '</div>';
 					strhtml += '</div>'
@@ -69,62 +69,62 @@ function approval(){
 					strhtml += '</div>'
 					strhtml += '<div class="mt10 bor-t">'
 					strhtml += '<div class="mt10 fr">'
-					strhtml += '<a class="it-btn" id="agree" style="text-align: center;" value='+resourceId+'>同意</a>'
-					strhtml += '<a class="it-btn ml10" id="disagree" style="text-align: center;"value='+resourceId+'>不同意</a>'
+					strhtml += '<a class="it-btn" id="agree" onclick="agree()" style="text-align: center;" value='+resourceId+'>同意</a>'
+					strhtml += '<a class="it-btn ml10" onclick="disagree()" id="disagree" style="text-align: center;"value='+resourceId+'>不同意</a>'
 					strhtml += '</div>'
 					strhtml += '</div>'
 					strhtml += '</div>'
 				}
 			}
 			$("#approval").html(strhtml);
-			$("#agree").click(function(){
-				var resourceId = $("#agree").attr("value");
-				$.ajax({
-					url: "http://47.103.65.135:8982/DoApproval/approvalController",
-					type: "post",
-					data: {
-						resourceId:resourceId,
-						agreeStatus:2,
-					},
-					success: function(date){
-						if(date.status == 1){
-							alert("审批成功");
-						}
-						approval();
-					},
-					error: function (date) {
-						alert("网络连接失败");
-						approval();
-					}
-				});
-			});
+			
 				
-			$("#disagree").click(function(){
-				var resourceId = $("#disagree").attr("value");
-				$.ajax({
-					url: "http://47.103.65.135:8982/DoApproval/approvalController",
-					type: "post",
-					data: {
-						resourceId:resourceId,
-						agreeStatus:3,
-					},
-					success: function(date){
-						if(date.status == 2){
-							alert("审批成功");
-						}
-						approval();
-					},
-					error: function (date) {
-						alert("网络连接失败");
-						approval();
-					}
-				});
-				
-			});
 		},
 	    error: function (date) {
 			strhtml = '审批单加载失败';
 	    }
 	});
 	
+}
+function agree(){
+	var resourceId = $("#agree").attr("value");
+	$.ajax({
+		url: "http://47.103.65.135:8982/DoApproval/approvalController",
+		type: "post",
+		data: {
+			resourceId:resourceId,
+			agreeStatus:2,
+		},
+		success: function(date){
+			if(date.status == 1){
+				alert("审批成功");
+			}
+			approval();
+		},
+		error: function (date) {
+			alert("网络连接失败");
+			approval();
+		}
+	});
+}
+function disagree(){
+	var resourceId = $("#disagree").attr("value");
+		$.ajax({
+			url: "http://47.103.65.135:8982/DoApproval/approvalController",
+			type: "post",
+			data: {
+				resourceId:resourceId,
+				agreeStatus:3,
+			},
+			success: function(date){
+				if(date.status == 2){
+					alert("审批成功");
+				}
+				approval();
+			},
+			error: function (date) {
+				alert("网络连接失败");
+				approval();
+			}
+		});
 }

@@ -2,6 +2,7 @@ approval();
 
 function approval() {
 	var AllList;
+	var showAllList = new Array();
 	var strhtml ='';
 	$.ajax({ //jQuery方法，此处可以换成其它请求方式
 		url: "http://47.103.65.135:8982/search/getAllList",
@@ -10,17 +11,21 @@ function approval() {
 		contentType: false, //不去设置Content-Type请求头
 		success: function(date) {
 			AllList = date.tCenterResourceList;
-			if (AllList.length != 0) {
-				for (var i = 0; i < AllList.length; i++) {
-					var resourceId = AllList[i].resourceId;
-					var resourceName = AllList[i].resourceName;
-					var resourceCode = AllList[i].resourceCode;
-					var spec = AllList[i].spec;
-					var liocation = AllList[i].liocation;
-					var keeperName = AllList[i].keeperName;
-					var responsibilityCenter = AllList[i].responsibilityCenter;
+			for(var j=0;j<AllList.length;j++){
+				if(AllList[j].status == 10){
+					showAllList.push(AllList[j]);
+				}
+			}
+			if (showAllList.length != 0) {
+				for (var i = 0; i < showAllList.length; i++) {
+					var resourceId = showAllList[i].resourceId;
+					var resourceName = showAllList[i].resourceName;
+					var resourceCode = showAllList[i].resourceCode;
+					var spec = showAllList[i].spec;
+					var liocation = showAllList[i].liocation;
+					var keeperName = showAllList[i].keeperName;
+					var responsibilityCenter = showAllList[i].responsibilityCenter;
 
-					
 					strhtml += '<div class="mt15 assets-list" style="height: 6.333333rem;width: auto;">';
 					strhtml += '<div class="assets-img">';
 					strhtml += '<img src="./images/computer.jpg" alt="" />';
@@ -44,35 +49,33 @@ function approval() {
 					strhtml += '</div>'
 					strhtml += '<div class="mt10 bor-t">'
 					strhtml += '<div class="mt10 fr">'
-					strhtml += '<a class="it-btn" id="add" style="text-align: center;" resourceId="'+resourceId+'" resourceCode="'+resourceCode+'">确认选择</a>'
+					strhtml += '<a class="it-btn" id="add" style="text-align: center;" onclick="jieyong()" resourceId="'+resourceId+'" resourceCode="'+resourceCode+'">确认选择</a>'
 					strhtml += '</div>'
 					strhtml += '</div>'
 					strhtml += '</div>'
 				}
 			}
 			$("#jie").html(strhtml);
-			$("#add").click(function() {
-				var resourceIds = this.getAttribute("resourceId");
-				var resourcecCodes = this.getAttribute("resourceCode");
-				var ser = $("form").serialize();
-				ser += "&resourceid=" + resourceId;
-				
-				var nowDate = new Date();
-								var day = nowDate.getDate();
-				                var month = nowDate.getMonth() + 1;//注意月份需要+1
-				                var year = nowDate.getFullYear()
-				                var date1 = year + '-' + month + '-' + day;
-				
-				ser += "&datenow1=" + date1;
-				ser += "&ApplyType=" + "31";
-				$.get("http://47.103.65.135:8982/user/apply", ser, function(rel) {
-					if (rel.result > 0) {
-						alert("新增成功");
-					} else {
-						alert("新增失败");
-					}
-				}, "json")
-			});
 		}
 	});
+}
+function jieyong(){
+	var resourceIds = $("#add").attr("resourceId")
+	var ser = $("form").serialize();
+	ser += "&resourceid=" + resourceIds;
+	var nowDate = new Date();
+					var day = nowDate.getDate();
+	                var month = nowDate.getMonth() + 1;//注意月份需要+1
+	                var year = nowDate.getFullYear()
+	                var date1 = year + '-' + month + '-' + day;
+	
+	ser += "&datenow1=" + date1;
+	$.get("http://47.103.65.135:8982/user/apply", ser, function(rel) {
+		if (rel.result > 0) {
+			alert("新增成功");
+		} else {
+			alert("新增失败");
+		}
+	}, "json");
+	approval();
 }
