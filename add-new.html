@@ -133,7 +133,11 @@
     </div>
 	<script type="text/javascript">
 		var myDate = new Date();
-		$("#inaccountDate").val(myDate.toLocaleString().substring(0,11));
+		var year = myDate.getFullYear().toString();
+		var month = myDate.getMonth().toString();
+		var date = myDate.getDate().toString();
+		var myDate1 = year+'-'+month+'-'+date;
+		$("#inaccountDate").val(myDate1);
 		  var file;
 		  var imginput = document.getElementById("picture");
 		  imginput.onchange = function () {
