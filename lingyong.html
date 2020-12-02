@@ -70,7 +70,11 @@
 		</div>
 		<script>
 			var myDate = new Date();
-			$("#date").val(myDate.toLocaleString().substring(0,11));
+			var year = myDate.getFullYear().toString();
+			var month = myDate.getMonth().toString();
+			var date = myDate.getDate().toString();
+			var myDate1 = year+'-'+month+'-'+date;
+			$("#date").val(myDate1);
 		</script>
 		
 	</body>
