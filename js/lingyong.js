@@ -1,6 +1,7 @@
 approval();
 
 function approval() {
+	var SPUList;
 	var AllList;
 	var showAllList = new Array();
 	var strhtml ='';
@@ -32,6 +33,7 @@ function approval() {
 					strhtml += '<div class="tag">闲置</div>';
 					strhtml += '</div>';
 					strhtml += '<div class="info">';
+					strhtml += '<div class="title">电脑</div>';
 					strhtml += '<div class="mt5 font13" >' + resourceId + '</div>';
 					strhtml += '<div class="mt5 font13 gray">' + resourceName + ' | ' + resourceCode + '</div>';
 					strhtml += '</div>'
@@ -45,7 +47,7 @@ function approval() {
 					strhtml += '</div>'
 					strhtml += '<div class="mt10">'
 					strhtml += '<span class="gray">负责人</span>'
-					strhtml += '<span class="ml15 black place">' + responsibilityCenter + '| ' + keeperName + '</span>'
+					strhtml += '<span class="ml15 black place">' + responsibilityCenter + ' | ' + keeperName + '</span>'
 					strhtml += '</div>'
 					strhtml += '<div class="mt10 bor-t">'
 					strhtml += '<div class="mt10 fr">'

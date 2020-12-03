@@ -49,7 +49,7 @@ function approval(){
 						showStatus = "报废";
 						showColor = '<div class="tag" style="background-color: #60656E;">报废</div>';
 					}
-					strhtml += '<div class="mt15 assets-list">';
+					strhtml += '<div class="mt15 assets-list" style="width:auto">';
 					strhtml += '<div class="assets-img">';
 					strhtml += '<img src="./images/computer.jpg" alt="" />';
 					strhtml += showColor;
